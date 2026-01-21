@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/tenant/layout,_N_T_/tenant/dashboard/layout,_N_T_/tenant/dashboard/page,_N_T_/tenant/dashboard"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/tenant/dashboard/__PAGE__",
+    "/tenant/dashboard",
+    "/tenant",
+    "/_index",
+    "/_head"
+  ]
+}

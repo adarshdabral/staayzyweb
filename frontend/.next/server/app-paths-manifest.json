@@ -1,0 +1,15 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/dashboard/page": "app/admin/dashboard/page.js",
+  "/auth/login/page": "app/auth/login/page.js",
+  "/auth/register/page": "app/auth/register/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/owner/dashboard/page": "app/owner/dashboard/page.js",
+  "/owner/page": "app/owner/page.js",
+  "/owner/properties/new/page": "app/owner/properties/new/page.js",
+  "/page": "app/page.js",
+  "/properties/[id]/page": "app/properties/[id]/page.js",
+  "/tenant/dashboard/page": "app/tenant/dashboard/page.js",
+  "/tenant/page": "app/tenant/page.js"
+}

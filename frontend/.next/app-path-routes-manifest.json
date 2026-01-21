@@ -1,0 +1,15 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/dashboard/page": "/admin/dashboard",
+  "/auth/login/page": "/auth/login",
+  "/auth/register/page": "/auth/register",
+  "/favicon.ico/route": "/favicon.ico",
+  "/owner/dashboard/page": "/owner/dashboard",
+  "/owner/page": "/owner",
+  "/owner/properties/new/page": "/owner/properties/new",
+  "/page": "/",
+  "/properties/[id]/page": "/properties/[id]",
+  "/tenant/dashboard/page": "/tenant/dashboard",
+  "/tenant/page": "/tenant"
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"auditLog.d.ts","sourceRoot":"","sources":["../../src/middleware/auditLog.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,YAAY,EAAE,MAAM,SAAS,CAAC;AACjD,OAAO,EAAE,WAAW,EAAE,MAAM,QAAQ,CAAC;AAGrC,eAAO,MAAM,cAAc,GACzB,KAAK,WAAW,EAChB,KAAK,QAAQ,EACb,MAAM,YAAY,kBAsCnB,CAAC"}

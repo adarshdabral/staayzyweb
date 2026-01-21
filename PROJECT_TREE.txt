@@ -1,0 +1,114 @@
+staayzy/
+├── components.json
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── README.md
+├── tailwind.config.ts
+├── tsconfig.json
+├── app/
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── admin/
+│   │   └── dashboard/
+│   │       └── page.tsx
+│   ├── auth/
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   └── register/
+│   │       └── page.tsx
+│   ├── owner/
+│   │   ├── page.tsx
+│   │   └── dashboard/
+│   │       └── page.tsx
+│   │   └── properties/
+│   │       └── new/
+│   │           └── page.tsx
+│   ├── properties/
+│   │   └── [id]/
+│   │       └── page.tsx
+│   ├── tenant/
+│   │   ├── page.tsx
+│   │   └── dashboard/
+│   │       └── page.tsx
+│   └── other routes/pages...
+├── components/
+│   ├── providers.tsx
+│   ├── layout/
+│   │   ├── Footer.tsx
+│   │   └── Header.tsx
+│   └── ui/
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── dialog.tsx
+│       ├── input.tsx
+│       ├── label.tsx
+│       ├── select.tsx
+│       ├── tabs.tsx
+│       ├── toast.tsx
+│       └── toaster.tsx
+├── lib/
+│   ├── api.ts
+│   ├── store.ts
+│   ├── types.ts
+│   ├── utils.ts
+│   └── hooks/
+│       └── use-toast.ts
+├── public/
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── server/
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── SETUP_MONGODB.md
+│   ├── .env.example
+│   └── src/
+│       ├── index.ts
+│       ├── config/
+│       │   └── cloudinary.ts
+│       ├── controllers/
+│       │   ├── adminController.ts
+│       │   ├── authController.ts
+│       │   ├── bookingController.ts
+│       │   ├── complaintController.ts
+│       │   ├── propertyController.ts
+│       │   ├── reviewController.ts
+│       │   ├── userController.ts
+│       │   ├── wishlistController.ts
+│       │   └── uploadController.ts
+│       ├── middleware/
+│       │   ├── auditLog.ts
+│       │   └── auth.ts
+│       ├── models/
+│       │   ├── AuditLog.ts
+│       │   ├── Booking.ts
+│       │   ├── Complaint.ts
+│       │   ├── Property.ts
+│       │   ├── Referral.ts
+│       │   ├── Review.ts
+│       │   ├── Room.ts
+│       │   ├── User.ts
+│       │   └── Wishlist.ts
+│       ├── routes/
+│       │   ├── admin.ts
+│       │   ├── auth.ts
+│       │   ├── bookings.ts
+│       │   ├── complaints.ts
+│       │   ├── properties.ts
+│       │   ├── reviews.ts
+│       │   ├── users.ts
+│       │   ├── wishlist.ts
+│       │   └── uploads.ts
+│       ├── scripts/
+│       │   └── seedAdmin.ts
+│       └── utils/
+│           ├── jwt.ts
+│           └── upload.ts
+└── other config / files...
