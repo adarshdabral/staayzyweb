@@ -28,28 +28,45 @@ console.log("[BOOT] Server starting on port", PORT);
 /* ──────────────────────────────
    CORS (FINAL, SAFE CONFIG)
 ────────────────────────────── */
-const RAW_FRONTEND = process.env.CLIENT_URL;
+// Allowed origins: keep minimal and explicit for production safety.
+// Permit both local dev and the Vercel deployment for staayzyweb.
+const RAW_FRONTEND = process.env.CLIENT_URL || "";
+const DEFAULT_ALLOWED = [
+  "http://localhost:3000",
+  "https://staayzyweb.vercel.app",
+];
 
-// Support a comma-separated CLIENT_URL for multiple allowed origins, and
-// default to localhost in development for convenience.
-const FRONTEND_URL =
-  RAW_FRONTEND && RAW_FRONTEND.includes(",")
-    ? RAW_FRONTEND.split(",").map((s) => s.trim())
-    : RAW_FRONTEND || "http://localhost:3000";
+// If deploy-time CLIENT_URL is provided, include any comma-separated entries
+// but ensure we don't accidentally allow anything else — merge and dedupe.
+const envOrigins = RAW_FRONTEND
+  .split(",")
+  .map((s) => s.trim())
+  .filter(Boolean);
 
-app.use(
-  cors({
-    origin: FRONTEND_URL,
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+const ALLOWED_ORIGINS = Array.from(new Set([...DEFAULT_ALLOWED, ...envOrigins]));
 
-// ✅ Explicit preflight handling
-app.options("*", cors());
+const corsOptions: cors.CorsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no Origin (e.g., server-to-server, curl)
+    if (!origin) return callback(null, true);
 
-console.log("[CORS] Allowed origin(s):", FRONTEND_URL);
+    if (ALLOWED_ORIGINS.indexOf(origin) !== -1) {
+      return callback(null, true);
+    }
+    return callback(new Error("Not allowed by CORS"));
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
+
+// Explicit preflight handling using the same options so OPTIONS responses
+// include the same Access-Control-* headers.
+app.options("*", cors(corsOptions));
+
+console.log("[CORS] Allowed origin(s):", ALLOWED_ORIGINS.join(", "));
 
 /* ──────────────────────────────
    BODY PARSERS
