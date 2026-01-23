@@ -21,6 +21,22 @@ import uploadRoutes from "./routes/uploads";
 ────────────────────────────── */
 dotenv.config();
 
+// Minimal production-time environment validation to fail fast and provide
+// actionable errors. This prevents subtle runtime failures (auth/db) after
+// deploy when required vars are missing.
+const IS_PROD = process.env.NODE_ENV === "production";
+if (IS_PROD) {
+  const missing: string[] = [];
+  if (!process.env.JWT_SECRET) missing.push("JWT_SECRET");
+  if (!process.env.MONGODB_URI) missing.push("MONGODB_URI");
+
+  if (missing.length > 0) {
+    console.error("[CONFIG] Missing required environment variables:", missing.join(", "));
+    console.error("[CONFIG] In production these must be set. Exiting to avoid insecure or broken runtime behavior.");
+    process.exit(1);
+  }
+}
+
 const app = express();
 const PORT = Number(process.env.PORT) || 5001;
 
@@ -50,14 +66,35 @@ const envOrigins = RAW_FRONTEND
 
 const ALLOWED_ORIGINS = Array.from(new Set([...DEFAULT_ALLOWED, ...envOrigins]));
 
+// Accept common private LAN subnets for local testing (port 3000). We use a
+// regex check instead of a permissive wildcard so credentialed requests may
+// be supported while still keeping the check reasonably scoped for dev use.
+// Matches:
+//  - http://10.x.x.x:3000
+//  - http://192.168.x.x:3000
+//  - http://172.16.x.x:3000 through http://172.31.x.x:3000
+const LAN_PRIVATE_REGEX = /^http:\/\/(?:10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2[0-9]|3[0-1])\.\d{1,3}\.\d{1,3}):3000$/;
+
 const corsOptions: cors.CorsOptions = {
   origin: function (origin, callback) {
+    // Debug: log incoming origin so we can see what the browser is sending.
+    console.log("[CORS] Incoming Origin:", origin);
+
     // Allow requests with no Origin (e.g., server-to-server, curl)
     if (!origin) return callback(null, true);
 
+    // Exact-match allowed origins
     if (ALLOWED_ORIGINS.indexOf(origin) !== -1) {
+      console.log("[CORS] Allowed origin (exact):", origin);
       return callback(null, true);
     }
+
+    // Allow common private LAN origins for local in-network testing (port 3000)
+    if (LAN_PRIVATE_REGEX.test(origin)) {
+      console.log("[CORS] Allowing LAN origin for dev testing:", origin);
+      return callback(null, true);
+    }
+
     // Log the rejected origin for easier production debugging
     console.warn("[CORS] Rejected origin:", origin);
     return callback(new Error(`CORS origin denied: ${origin}`));
@@ -69,8 +106,9 @@ const corsOptions: cors.CorsOptions = {
 
 app.use(cors(corsOptions));
 
-// Explicit preflight handling using the same options so OPTIONS responses
-// include the same Access-Control-* headers.
+// Explicitly handle preflight requests using the configured options only.
+// Do NOT add a plain `cors()` handler after this as it would respond without
+// credentials and break cross-site cookie scenarios.
 app.options("*", cors(corsOptions));
 
 console.log("[CORS] Allowed origin(s):", ALLOWED_ORIGINS.join(", "));
@@ -192,6 +230,13 @@ app.get("/api/health", (_req, res) => {
   });
 });
 
+// Lightweight network health endpoint for simple network / load-balancer /
+// browser probes. Returns plain ok to make `curl http://HOST:PORT/health` easy
+// to use during LAN troubleshooting.
+app.get("/health", (_req, res) => {
+  res.json({ ok: true });
+});
+
 /* ──────────────────────────────
    GLOBAL ERROR HANDLER
 ────────────────────────────── */
@@ -203,6 +248,9 @@ app.use((err: any, _req: any, res: any, _next: any) => {
 /* ──────────────────────────────
    SERVER START
 ────────────────────────────── */
-app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+// Bind to 0.0.0.0 so the server is reachable on the host's LAN IP (not only
+// on 127.0.0.1). This is important for local network testing (e.g. http://10.159.x.x:3000
+// talking to http://<machine-ip>:5001).
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Server running on 0.0.0.0:${PORT} (accessible via LAN IP)`);
 });

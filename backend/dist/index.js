@@ -23,6 +23,22 @@ const uploads_1 = __importDefault(require("./routes/uploads"));
    ENV SETUP
 ────────────────────────────── */
 dotenv_1.default.config();
+// Minimal production-time environment validation to fail fast and provide
+// actionable errors. This prevents subtle runtime failures (auth/db) after
+// deploy when required vars are missing.
+const IS_PROD = process.env.NODE_ENV === "production";
+if (IS_PROD) {
+    const missing = [];
+    if (!process.env.JWT_SECRET)
+        missing.push("JWT_SECRET");
+    if (!process.env.MONGODB_URI)
+        missing.push("MONGODB_URI");
+    if (missing.length > 0) {
+        console.error("[CONFIG] Missing required environment variables:", missing.join(", "));
+        console.error("[CONFIG] In production these must be set. Exiting to avoid insecure or broken runtime behavior.");
+        process.exit(1);
+    }
+}
 const app = (0, express_1.default)();
 const PORT = Number(process.env.PORT) || 5001;
 console.log("[BOOT] Server starting on port", PORT);
@@ -46,12 +62,25 @@ const envOrigins = RAW_FRONTEND
     .map((s) => s.trim())
     .filter(Boolean);
 const ALLOWED_ORIGINS = Array.from(new Set([...DEFAULT_ALLOWED, ...envOrigins]));
+// Accept a small LAN subnet for local testing (10.159.x.x:3000). We use a
+// regex check instead of a permissive wildcard so credentials header may be
+// supported while still being reasonably safe for local testing.
+const LAN_10_159_REGEX = /^http:\/\/10\.159\.\d{1,3}\.\d{1,3}:3000$/;
 const corsOptions = {
     origin: function (origin, callback) {
+        // Debug: log incoming origin so we can see what the browser is sending.
+        console.log("[CORS] Incoming Origin:", origin);
         // Allow requests with no Origin (e.g., server-to-server, curl)
         if (!origin)
             return callback(null, true);
+        // Exact-match allowed origins
         if (ALLOWED_ORIGINS.indexOf(origin) !== -1) {
+            console.log("[CORS] Allowed origin (exact):", origin);
+            return callback(null, true);
+        }
+        // Allow the LAN 10.159.* host for in-network testing (port 3000)
+        if (LAN_10_159_REGEX.test(origin)) {
+            console.log("[CORS] Allowing LAN origin for dev testing:", origin);
             return callback(null, true);
         }
         // Log the rejected origin for easier production debugging
@@ -63,8 +92,9 @@ const corsOptions = {
     allowedHeaders: ["Content-Type", "Authorization"],
 };
 app.use((0, cors_1.default)(corsOptions));
-// Explicit preflight handling using the same options so OPTIONS responses
-// include the same Access-Control-* headers.
+// Explicitly handle preflight requests using the configured options only.
+// Do NOT add a plain `cors()` handler after this as it would respond without
+// credentials and break cross-site cookie scenarios.
 app.options("*", (0, cors_1.default)(corsOptions));
 console.log("[CORS] Allowed origin(s):", ALLOWED_ORIGINS.join(", "));
 /* ──────────────────────────────
@@ -170,6 +200,12 @@ app.get("/api/health", (_req, res) => {
         dbState: mongoose_1.default.connection.readyState,
     });
 });
+// Lightweight network health endpoint for simple network / load-balancer /
+// browser probes. Returns plain ok to make `curl http://HOST:PORT/health` easy
+// to use during LAN troubleshooting.
+app.get("/health", (_req, res) => {
+    res.json({ ok: true });
+});
 /* ──────────────────────────────
    GLOBAL ERROR HANDLER
 ────────────────────────────── */
@@ -180,7 +216,10 @@ app.use((err, _req, res, _next) => {
 /* ──────────────────────────────
    SERVER START
 ────────────────────────────── */
-app.listen(PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
+// Bind to 0.0.0.0 so the server is reachable on the host's LAN IP (not only
+// on 127.0.0.1). This is important for local network testing (e.g. http://10.159.x.x:3000
+// talking to http://<machine-ip>:5001).
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`🚀 Server running on 0.0.0.0:${PORT} (accessible via LAN IP)`);
 });
 //# sourceMappingURL=index.js.map
