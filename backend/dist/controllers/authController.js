@@ -36,7 +36,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getMe = exports.login = exports.register = void 0;
+exports.getMe = exports.logout = exports.login = exports.register = void 0;
 const User_1 = __importDefault(require("../models/User"));
 const jwt_1 = require("../utils/jwt");
 const zod_1 = require("zod");
@@ -103,6 +103,17 @@ const register = async (req, res) => {
             }
         }
         const token = (0, jwt_1.generateToken)({ id: user._id.toString(), role: user.role });
+        // Cookie options
+        const isProd = process.env.NODE_ENV === "production";
+        const cookieMaxAge = Number(process.env.COOKIE_MAX_AGE_MS) || 7 * 24 * 60 * 60 * 1000; // 7 days
+        const cookieOptions = {
+            httpOnly: true,
+            secure: isProd, // only over HTTPS in production
+            sameSite: "none", // allow cross-site cookie for Vercel <-> Render
+            maxAge: cookieMaxAge,
+        };
+        // Set auth cookie (used for cross-site auth when frontend and backend are on different domains)
+        res.cookie("auth_token", token, cookieOptions);
         res.status(201).json({
             message: "User registered successfully",
             token,
@@ -147,6 +158,16 @@ const login = async (req, res) => {
                 role: "admin",
             };
             const token = (0, jwt_1.generateToken)({ id: "admin", role: "admin" });
+            // Set cookie for admin login as well
+            const isProd = process.env.NODE_ENV === "production";
+            const cookieMaxAge = Number(process.env.COOKIE_MAX_AGE_MS) || 7 * 24 * 60 * 60 * 1000;
+            const cookieOptions = {
+                httpOnly: true,
+                secure: isProd,
+                sameSite: "none",
+                maxAge: cookieMaxAge,
+            };
+            res.cookie("auth_token", token, cookieOptions);
             return res.json({
                 message: "Login successful",
                 token,
@@ -159,6 +180,16 @@ const login = async (req, res) => {
             return res.status(401).json({ message: "Invalid credentials" });
         }
         const token = (0, jwt_1.generateToken)({ id: user._id.toString(), role: user.role });
+        // Set cookie
+        const isProd = process.env.NODE_ENV === "production";
+        const cookieMaxAge = Number(process.env.COOKIE_MAX_AGE_MS) || 7 * 24 * 60 * 60 * 1000;
+        const cookieOptions = {
+            httpOnly: true,
+            secure: isProd,
+            sameSite: "none",
+            maxAge: cookieMaxAge,
+        };
+        res.cookie("auth_token", token, cookieOptions);
         res.json({
             message: "Login successful",
             token,
@@ -181,6 +212,23 @@ const login = async (req, res) => {
     }
 };
 exports.login = login;
+const logout = async (_req, res) => {
+    try {
+        const isProd = process.env.NODE_ENV === "production";
+        const cookieOptions = {
+            httpOnly: true,
+            secure: isProd,
+            sameSite: "none",
+        };
+        res.clearCookie("auth_token", cookieOptions);
+        res.json({ message: "Logged out" });
+    }
+    catch (err) {
+        console.error("Logout error:", err);
+        res.status(500).json({ message: "Failed to logout" });
+    }
+};
+exports.logout = logout;
 const getMe = async (req, res) => {
     try {
         // Support admin user (not stored in DB)

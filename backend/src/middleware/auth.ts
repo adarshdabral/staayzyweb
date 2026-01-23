@@ -24,16 +24,25 @@ export const authenticate = async (
       console.log("[AUTH] Request:", req.method, req.originalUrl);
     }
 
-    const authHeader = req.headers.authorization;
+    // Try cookie first (useful when frontend and backend are on different domains)
+    let token = (req as any).cookies?.auth_token as string | undefined;
 
-    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    // Fallback to Authorization header if cookie missing
+    if (!token) {
+      const authHeader = req.headers.authorization;
+      if (authHeader && authHeader.startsWith("Bearer ")) {
+        token = authHeader.split(" ")[1];
+      }
+    }
+
+    if (!token) {
       if (process.env.NODE_ENV === "development") {
-        console.warn("[AUTH] Missing or malformed Authorization header");
+        console.warn("[AUTH] Missing token (cookie or Authorization header)");
+      } else {
+        console.warn("[AUTH] Missing token in production request", { url: req.originalUrl, ip: req.ip });
       }
       return res.status(401).json({ message: "Authentication required" });
     }
-
-    const token = authHeader.split(" ")[1];
 
     if (!token) {
       return res.status(401).json({ message: "Authentication required" });
@@ -48,7 +57,7 @@ export const authenticate = async (
       console.log("[AUTH] Verifying JWT...");
     }
 
-    const decoded = jwt.verify(token, JWT_SECRET) as any;
+  const decoded = jwt.verify(token, JWT_SECRET) as any;
 
     if (process.env.NODE_ENV === "development") {
       console.log("[AUTH] Token decoded:", decoded);

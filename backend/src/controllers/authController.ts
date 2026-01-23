@@ -73,7 +73,20 @@ export const register = async (req: AuthRequest, res: Response) => {
       }
     }
 
-  const token = generateToken({ id: user._id.toString(), role: user.role });
+    const token = generateToken({ id: user._id.toString(), role: user.role });
+
+    // Cookie options
+    const isProd = process.env.NODE_ENV === "production";
+    const cookieMaxAge = Number(process.env.COOKIE_MAX_AGE_MS) || 7 * 24 * 60 * 60 * 1000; // 7 days
+    const cookieOptions = {
+      httpOnly: true,
+      secure: isProd, // only over HTTPS in production
+      sameSite: "none" as const, // allow cross-site cookie for Vercel <-> Render
+      maxAge: cookieMaxAge,
+    };
+
+    // Set auth cookie (used for cross-site auth when frontend and backend are on different domains)
+    res.cookie("auth_token", token, cookieOptions);
 
     res.status(201).json({
       message: "User registered successfully",
@@ -122,6 +135,17 @@ export const login = async (req: AuthRequest, res: Response) => {
 
       const token = generateToken({ id: "admin", role: "admin" });
 
+      // Set cookie for admin login as well
+      const isProd = process.env.NODE_ENV === "production";
+      const cookieMaxAge = Number(process.env.COOKIE_MAX_AGE_MS) || 7 * 24 * 60 * 60 * 1000;
+      const cookieOptions = {
+        httpOnly: true,
+        secure: isProd,
+        sameSite: "none" as const,
+        maxAge: cookieMaxAge,
+      };
+      res.cookie("auth_token", token, cookieOptions);
+
       return res.json({
         message: "Login successful",
         token,
@@ -139,6 +163,17 @@ export const login = async (req: AuthRequest, res: Response) => {
     }
 
     const token = generateToken({ id: user._id.toString(), role: user.role });
+
+    // Set cookie
+    const isProd = process.env.NODE_ENV === "production";
+    const cookieMaxAge = Number(process.env.COOKIE_MAX_AGE_MS) || 7 * 24 * 60 * 60 * 1000;
+    const cookieOptions = {
+      httpOnly: true,
+      secure: isProd,
+      sameSite: "none" as const,
+      maxAge: cookieMaxAge,
+    };
+    res.cookie("auth_token", token, cookieOptions);
 
     res.json({
       message: "Login successful",
@@ -158,6 +193,22 @@ export const login = async (req: AuthRequest, res: Response) => {
     }
     console.error("Login error:", error);
     res.status(500).json({ message: "Server error" });
+  }
+};
+
+export const logout = async (_req: AuthRequest, res: Response) => {
+  try {
+    const isProd = process.env.NODE_ENV === "production";
+    const cookieOptions = {
+      httpOnly: true,
+      secure: isProd,
+      sameSite: "none" as const,
+    };
+    res.clearCookie("auth_token", cookieOptions as any);
+    res.json({ message: "Logged out" });
+  } catch (err) {
+    console.error("Logout error:", err);
+    res.status(500).json({ message: "Failed to logout" });
   }
 };
 

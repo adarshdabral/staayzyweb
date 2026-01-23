@@ -16,6 +16,7 @@
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "cors": "^2.8.5",
+  "cookie-parser": "^1.4.6",
     "zod": "^3.23.8",
     "cloudinary": "^2.1.6",
   "multer": "^1.4.5-lts.1"
@@ -26,6 +27,7 @@
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/cors": "^2.8.17",
+    "@types/cookie-parser": "^1.4.3",
     "@types/multer": "^1.4.12",
     "typescript": "^5.5.4",
     "tsx": "^4.16.2"

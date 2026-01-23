@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cookieParser from "cookie-parser";
 import { promises as dns } from "dns";
 
 // Routes
@@ -24,6 +25,10 @@ const app = express();
 const PORT = Number(process.env.PORT) || 5001;
 
 console.log("[BOOT] Server starting on port", PORT);
+
+// Trust proxy when running behind Render / Vercel so `secure` cookies work
+// (they require req.secure or trust proxy to detect HTTPS when proxied).
+app.set("trust proxy", process.env.TRUST_PROXY === "1" || process.env.NODE_ENV === "production");
 
 /* ──────────────────────────────
    CORS (FINAL, SAFE CONFIG)
@@ -53,7 +58,9 @@ const corsOptions: cors.CorsOptions = {
     if (ALLOWED_ORIGINS.indexOf(origin) !== -1) {
       return callback(null, true);
     }
-    return callback(new Error("Not allowed by CORS"));
+    // Log the rejected origin for easier production debugging
+    console.warn("[CORS] Rejected origin:", origin);
+    return callback(new Error(`CORS origin denied: ${origin}`));
   },
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
@@ -73,6 +80,9 @@ console.log("[CORS] Allowed origin(s):", ALLOWED_ORIGINS.join(", "));
 ────────────────────────────── */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Parse cookies so middleware can read auth cookies when present
+app.use(cookieParser());
 
 /* ──────────────────────────────
    REQUEST LOGGER

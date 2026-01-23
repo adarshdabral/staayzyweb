@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const mongoose_1 = __importDefault(require("mongoose"));
+const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const dns_1 = require("dns");
 // Routes
 const auth_1 = __importDefault(require("./routes/auth"));
@@ -25,24 +26,54 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = Number(process.env.PORT) || 5001;
 console.log("[BOOT] Server starting on port", PORT);
+// Trust proxy when running behind Render / Vercel so `secure` cookies work
+// (they require req.secure or trust proxy to detect HTTPS when proxied).
+app.set("trust proxy", process.env.TRUST_PROXY === "1" || process.env.NODE_ENV === "production");
 /* ──────────────────────────────
    CORS (FINAL, SAFE CONFIG)
 ────────────────────────────── */
-const FRONTEND_URL = process.env.CLIENT_URL || "http://localhost:3000";
-app.use((0, cors_1.default)({
-    origin: FRONTEND_URL,
+// Allowed origins: keep minimal and explicit for production safety.
+// Permit both local dev and the Vercel deployment for staayzyweb.
+const RAW_FRONTEND = process.env.CLIENT_URL || "";
+const DEFAULT_ALLOWED = [
+    "http://localhost:3000",
+    "https://staayzyweb.vercel.app",
+];
+// If deploy-time CLIENT_URL is provided, include any comma-separated entries
+// but ensure we don't accidentally allow anything else — merge and dedupe.
+const envOrigins = RAW_FRONTEND
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+const ALLOWED_ORIGINS = Array.from(new Set([...DEFAULT_ALLOWED, ...envOrigins]));
+const corsOptions = {
+    origin: function (origin, callback) {
+        // Allow requests with no Origin (e.g., server-to-server, curl)
+        if (!origin)
+            return callback(null, true);
+        if (ALLOWED_ORIGINS.indexOf(origin) !== -1) {
+            return callback(null, true);
+        }
+        // Log the rejected origin for easier production debugging
+        console.warn("[CORS] Rejected origin:", origin);
+        return callback(new Error(`CORS origin denied: ${origin}`));
+    },
     credentials: true,
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
-}));
-// ✅ Explicit preflight handling
-app.options("*", (0, cors_1.default)());
-console.log("[CORS] Allowed origin:", FRONTEND_URL);
+};
+app.use((0, cors_1.default)(corsOptions));
+// Explicit preflight handling using the same options so OPTIONS responses
+// include the same Access-Control-* headers.
+app.options("*", (0, cors_1.default)(corsOptions));
+console.log("[CORS] Allowed origin(s):", ALLOWED_ORIGINS.join(", "));
 /* ──────────────────────────────
    BODY PARSERS
 ────────────────────────────── */
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
+// Parse cookies so middleware can read auth cookies when present
+app.use((0, cookie_parser_1.default)());
 /* ──────────────────────────────
    REQUEST LOGGER
 ────────────────────────────── */

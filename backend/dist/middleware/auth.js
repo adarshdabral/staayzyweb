@@ -18,14 +18,24 @@ const authenticate = async (req, res, next) => {
         if (process.env.NODE_ENV === "development") {
             console.log("[AUTH] Request:", req.method, req.originalUrl);
         }
-        const authHeader = req.headers.authorization;
-        if (!authHeader || !authHeader.startsWith("Bearer ")) {
+        // Try cookie first (useful when frontend and backend are on different domains)
+        let token = req.cookies?.auth_token;
+        // Fallback to Authorization header if cookie missing
+        if (!token) {
+            const authHeader = req.headers.authorization;
+            if (authHeader && authHeader.startsWith("Bearer ")) {
+                token = authHeader.split(" ")[1];
+            }
+        }
+        if (!token) {
             if (process.env.NODE_ENV === "development") {
-                console.warn("[AUTH] Missing or malformed Authorization header");
+                console.warn("[AUTH] Missing token (cookie or Authorization header)");
+            }
+            else {
+                console.warn("[AUTH] Missing token in production request", { url: req.originalUrl, ip: req.ip });
             }
             return res.status(401).json({ message: "Authentication required" });
         }
-        const token = authHeader.split(" ")[1];
         if (!token) {
             return res.status(401).json({ message: "Authentication required" });
         }
