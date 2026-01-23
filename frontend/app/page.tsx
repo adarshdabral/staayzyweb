@@ -8,11 +8,35 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import api from "@/lib/api";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
+
+  // Redirect owners to their dashboard if already authenticated
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const res = await api.get("/auth/me");
+        const role = res?.data?.role || res?.data?.user?.role;
+        if (!mounted) return;
+        if (role === "owner") {
+          router.replace("/owner");
+        }
+      } catch (err: any) {
+        // not authenticated or other error — stay on public landing
+        if (process.env.NODE_ENV !== "production") {
+          console.debug("[HOME] /auth/me check failed:", err?.message || err);
+        }
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
+  }, [router]);
 
   // const { data: featuredProperties } = useQuery({
   //   queryKey: ["featured-properties"],

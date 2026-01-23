@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useQuery } from "@tanstack/react-query";
@@ -13,6 +14,34 @@ export default function OwnerLandingPage() {
   const router = useRouter();
 
   const { token } = useAuthStore();
+  const [authorized, setAuthorized] = useState<boolean>(false);
+  const [checking, setChecking] = useState<boolean>(true);
+
+  // Ensure only owners can access this page. If not owner, redirect to public landing.
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const res = await api.get("/auth/me");
+        const role = res?.data?.role || res?.data?.user?.role;
+        if (!mounted) return;
+        if (role === "owner") {
+          setAuthorized(true);
+        } else {
+          router.replace("/");
+        }
+      } catch (err) {
+        // not authenticated — redirect to public landing
+        if (mounted) router.replace("/");
+      } finally {
+        if (mounted) setChecking(false);
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
+  }, [router]);
 
   const { data: properties } = useQuery({
     queryKey: ["owner-properties"],
@@ -22,6 +51,10 @@ export default function OwnerLandingPage() {
       return response.data;
     },
   });
+
+  if (checking) return <div className="p-8">Checking permissions...</div>;
+
+  if (!authorized) return null;
 
   return (
     <div className="min-h-screen bg-gray-50">

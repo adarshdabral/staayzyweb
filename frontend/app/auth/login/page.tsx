@@ -25,12 +25,8 @@ export default function LoginPage() {
   setLoading(true);
 
   try {
-    const response = await api.post("/auth/login", formData);
-    
-alert(JSON.stringify(response.data, null, 2));
-console.log("LOGIN RESPONSE RAW:", response);
-console.log("LOGIN RESPONSE DATA:", response.data);
-    const { token, user } = response.data;
+  const response = await api.post("/auth/login", formData);
+  const { token, user } = response.data;
 
     // 🔥 1️⃣ PERSIST AUTH (THIS WAS MISSING)
     localStorage.setItem("token", token);
@@ -39,11 +35,14 @@ console.log("LOGIN RESPONSE DATA:", response.data);
     // 🔥 2️⃣ UPDATE IN-MEMORY STATE
     setAuth(user, token);
 
-setTimeout(() => {
-  if (user.role === "admin") router.push("/admin/dashboard");
-  else if (user.role === "owner") router.push("/owner/dashboard");
-  else router.push("/tenant/dashboard");
-}, 0);
+    // Redirect based on role: admin -> admin dashboard, owner -> owner area, others -> main site
+    if (user.role === "admin") {
+      router.push("/admin/dashboard");
+    } else if (user.role === "owner") {
+      router.push("/owner");
+    } else {
+      router.push("/");
+    }
 
 
     toast({
@@ -51,14 +50,7 @@ setTimeout(() => {
       description: `Welcome back, ${user.name}!`,
     });
 
-    // 🔥 3️⃣ REDIRECT AFTER SAVE
-    // if (user.role === "admin") {
-    //   router.push("/admin/dashboard");
-    // } else if (user.role === "owner") {
-    //   router.push("/owner/dashboard");
-    // } else {
-    //   router.push("/tenant/dashboard");
-    // }
+  // Redirect handled above
   } catch (error: any) {
     toast({
       title: "Login failed",

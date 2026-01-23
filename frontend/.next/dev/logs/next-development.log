@@ -1,0 +1,245 @@
+[00:00:01.023] Server  LOG     ✓ Ready in 734ms
+[00:00:04.093] Server  WARN    ⚠ Cross origin request detected from 192.168.250.181 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:00:04.123] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.276] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:04.276] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:04.276] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:04.276] Browser LOG     [API REQUEST] GET /properties?status=approved
+[00:00:04.594] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:04.594] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:04.594] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:04.594] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:04.594] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:00:04.594] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:04.594] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:04.594] Browser LOG     [API RESPONSE] 200 /properties?status=approved [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:00:04.594] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:04.728] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:04.728] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:00:07.303] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:07.303] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:07.303] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:07.303] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:07.430] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:07.579] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:07.579] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:07.579] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:07.579] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:07.579] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:07.931] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:08.079] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:10.871] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:10.871] Browser LOG     [API REQUEST] POST /auth/logout
+[00:00:10.871] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
+[00:00:10.871] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:10.871] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:10.871] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:10.871] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:10.871] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://192.168.250.181:5001/api/auth/me"}
+[00:00:10.871] Browser WARN    [API] Backend message: Authentication required
+[00:00:10.871] Browser WARN    [API] Backend error: null
+[00:00:10.871] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://192.168.250.181:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://192.168.250.181:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:00:10.871] Browser DEBUG   [HOME] /auth/me check failed: Request failed with status code 401
+[00:00:10.871] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://192.168.250.181:5001/api/auth/me"}
+[00:00:10.871] Browser WARN    [API] Backend message: Authentication required
+[00:00:10.871] Browser WARN    [API] Backend error: null
+[00:00:10.871] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://192.168.250.181:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://192.168.250.181:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:00:10.871] Browser DEBUG   [HOME] /auth/me check failed: Request failed with status code 401
+[00:00:16.663] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:16.663] Browser LOG     [API REQUEST] POST /auth/login
+[00:00:16.663] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
+[00:00:16.916] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5NTYxNCwiZXhwIjoxNzY5ODAwNDE0fQ.4fYacKhI3VpoQ6UxZb0skakz9kxf3dWVRdNJEGi_iEM","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
+[00:00:16.916] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5NTYxNCwiZXhwIjoxNzY5ODAwNDE0fQ.4fYacKhI3VpoQ6UxZb0skakz9kxf3dWVRdNJEGi_iEM
+[00:00:16.916] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:16.916] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:16.916] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:16.916] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:17.083] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:17.221] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:19.055] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:19.055] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:19.055] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:19.055] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:19.222] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:19.401] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:19.401] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:19.401] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:19.401] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:19.401] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:19.546] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:19.682] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:32.766] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:36.234] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:36.319] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:36.319] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:36.319] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:36.319] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:00:37.502] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:37.602] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:37.602] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:37.602] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:37.602] Browser LOG     [API REQUEST] GET /properties?status=approved
+[00:00:38.787] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:38.931] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:38.931] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:38.931] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:00:38.931] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:00:39.070] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:39.223] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:02:40.363] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:02:40.364] Browser LOG     [API REQUEST] GET /auth/me
+[00:02:40.364] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:02:40.364] Browser LOG     [API REQUEST] GET /properties?status=approved
+[00:02:40.364] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:02:40.364] Browser LOG     [API REQUEST] GET /auth/me
+[00:02:40.502] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:02:40.679] Browser LOG     [API RESPONSE] 200 /properties?status=approved [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:02:40.679] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:02:40.679] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:02:40.679] Browser LOG     [API REQUEST] GET /auth/me
+[00:02:40.679] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:02:40.679] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:02:40.679] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:02:40.679] Browser LOG     [API REQUEST] GET /auth/me
+[00:02:40.834] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:02:40.977] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:02:40.977] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:16:24.486] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:24.486] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:24.486] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:24.486] Browser LOG     [API REQUEST] GET /properties?status=approved
+[00:16:24.486] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:24.486] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:24.612] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:24.764] Browser LOG     [API RESPONSE] 200 /properties?status=approved [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:16:24.764] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:24.764] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:24.764] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:24.764] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:24.764] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:16:24.764] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:24.764] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:24.886] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:25.029] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:25.029] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:16:29.580] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:29.580] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:29.580] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:29.580] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:29.694] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:29.850] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:29.850] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:29.850] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:29.850] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:29.850] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:29.977] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:30.089] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:32.278] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:32.279] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:32.279] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:32.279] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:32.413] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:32.570] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:32.570] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:32.570] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:32.570] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:32.570] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:32.701] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:32.816] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:33.370] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:33.370] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:33.370] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:33.370] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:33.492] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:33.644] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:33.644] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:33.644] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:33.644] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:33.644] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:33.779] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:33.894] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:34.360] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:34.360] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:34.360] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:34.360] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:34.512] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:34.650] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:34.650] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:34.650] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:34.650] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:34.650] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:34.772] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:34.888] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:35.341] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:35.341] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:35.341] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:35.341] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:35.472] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:35.612] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:35.612] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:35.612] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:35.612] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:35.612] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:35.741] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:35.858] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:36.360] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:36.360] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:36.360] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:36.360] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:36.510] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:36.653] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:36.654] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:36.654] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:36.654] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:36.654] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:36.782] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:36.894] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:37.259] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:37.259] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:37.259] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:37.259] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:37.377] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:37.526] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:37.526] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:37.526] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:37.526] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:37.526] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:37.654] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:37.782] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:39.901] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:39.901] Browser LOG     [API REQUEST] POST /auth/logout
+[00:16:39.901] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
+[00:16:39.901] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:39.901] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:39.901] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:39.901] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:39.901] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://192.168.250.181:5001/api/auth/me"}
+[00:16:39.901] Browser WARN    [API] Backend message: Authentication required
+[00:16:39.901] Browser WARN    [API] Backend error: null
+[00:16:39.901] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://192.168.250.181:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://192.168.250.181:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:16:39.901] Browser DEBUG   [HOME] /auth/me check failed: Request failed with status code 401
+[00:16:39.901] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://192.168.250.181:5001/api/auth/me"}
+[00:16:39.901] Browser WARN    [API] Backend message: Authentication required
+[00:16:39.901] Browser WARN    [API] Backend error: null
+[00:16:39.901] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://192.168.250.181:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://192.168.250.181:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:16:39.901] Browser DEBUG   [HOME] /auth/me check failed: Request failed with status code 401
+[00:16:59.425] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:59.425] Browser LOG     [API REQUEST] POST /auth/login
+[00:16:59.425] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
+[00:16:59.717] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5NjYxNywiZXhwIjoxNzY5ODAxNDE3fQ.O3HLPQSSzwKZl_n3K2ryEU1QL7pMevk2x_GNxJi1xm8","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
+[00:16:59.717] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5NjYxNywiZXhwIjoxNzY5ODAxNDE3fQ.O3HLPQSSzwKZl_n3K2ryEU1QL7pMevk2x_GNxJi1xm8
+[00:16:59.717] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:59.717] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:59.717] Browser LOG     [API] Runtime baseURL computed: http://192.168.250.181:5001/api (overrideLocalhost= false )
+[00:16:59.717] Browser LOG     [API REQUEST] GET /auth/me
+[00:17:00.012] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:17:00.339] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}

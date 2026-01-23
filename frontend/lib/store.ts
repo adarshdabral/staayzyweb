@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import type { User } from "./types";
+import api from "./api";
 
 interface AuthState {
   user: User | null;
@@ -29,7 +30,17 @@ export const useAuthStore = create<AuthState>()(
       },
 
       logout: () => {
+        // Clear client-side auth immediately
         set({ user: null, token: null });
+
+        // Notify server to clear cookie (fire-and-forget)
+        try {
+          api.post("/auth/logout").catch((e) => {
+            console.warn("[AUTH] Server logout failed:", e?.response?.data || e.message);
+          });
+        } catch (e) {
+          // ignore
+        }
       },
     }),
     {
