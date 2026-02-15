@@ -55,6 +55,8 @@ const RAW_FRONTEND = process.env.CLIENT_URL || "";
 const DEFAULT_ALLOWED = [
   "http://localhost:3000",
   "https://staayzyweb.vercel.app",
+   "https://staayzy.com",
+    "https://www.staayzy.com"
 ];
 
 // If deploy-time CLIENT_URL is provided, include any comma-separated entries

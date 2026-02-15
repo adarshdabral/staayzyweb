@@ -1,238 +1,283 @@
-[00:00:02.227] Server  LOG     ✓ Ready in 1929ms
-[00:05:52.240] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:52.391] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:52.391] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:52.391] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:52.391] Browser LOG     [API REQUEST] GET /properties?status=approved
-[00:05:52.391] Browser ERROR   Backend not reached (network or CORS issue)
-[00:05:52.391] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:05:52.391] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:05:52.391] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:05:52.391] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:05:52.391] Browser DEBUG   [HOME] /auth/me check failed: Network Error
-[00:05:52.391] Browser ERROR   Backend not reached (network or CORS issue)
-[00:05:52.391] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/properties?status=approved
-[00:05:52.391] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/properties?status=approved"}
-[00:05:52.391] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:05:52.391] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/properties?status=approved","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:05:53.397] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:53.397] Browser LOG     [API REQUEST] GET /properties?status=approved
-[00:05:53.397] Browser ERROR   Backend not reached (network or CORS issue)
-[00:05:53.397] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/properties?status=approved
-[00:05:53.397] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/properties?status=approved"}
-[00:05:53.397] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:05:53.397] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/properties?status=approved","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:05:55.403] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:55.403] Browser LOG     [API REQUEST] GET /properties?status=approved
-[00:05:55.403] Browser ERROR   Backend not reached (network or CORS issue)
-[00:05:55.403] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/properties?status=approved
-[00:05:55.403] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/properties?status=approved"}
-[00:05:55.403] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:05:55.403] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/properties?status=approved","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:05:59.410] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:59.410] Browser LOG     [API REQUEST] GET /properties?status=approved
-[00:05:59.410] Browser ERROR   Backend not reached (network or CORS issue)
-[00:05:59.410] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/properties?status=approved
-[00:05:59.410] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/properties?status=approved"}
-[00:05:59.410] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:05:59.410] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/properties?status=approved","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:06:15.034] Server  LOG     ✓ Compiled in 88ms
-[00:06:15.185] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:06:15.185] Browser LOG     [API REQUEST] GET /properties?status=approved
-[00:06:15.185] Browser ERROR   Backend not reached (network or CORS issue)
-[00:06:15.185] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/properties?status=approved
-[00:06:15.185] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/properties?status=approved"}
-[00:06:15.185] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:06:15.185] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/properties?status=approved","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:06:37.982] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:06:37.982] Browser LOG     [API REQUEST] GET /properties?status=approved
-[00:06:37.982] Browser ERROR   Backend not reached (network or CORS issue)
-[00:06:37.982] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/properties?status=approved
-[00:06:37.982] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/properties?status=approved"}
-[00:06:37.982] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:06:37.982] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/properties?status=approved","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:06:39.990] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:06:39.990] Browser LOG     [API REQUEST] GET /properties?status=approved
-[00:06:39.990] Browser ERROR   Backend not reached (network or CORS issue)
-[00:06:39.990] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/properties?status=approved
-[00:06:39.990] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/properties?status=approved"}
-[00:06:39.990] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:06:39.990] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/properties?status=approved","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:08:39.717] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:08:39.718] Browser LOG     [API REQUEST] GET /properties?status=approved
-[00:08:39.718] Browser ERROR   Backend not reached (network or CORS issue)
-[00:08:39.718] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/properties?status=approved
-[00:08:39.718] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/properties?status=approved"}
-[00:08:39.718] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:08:39.718] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/properties?status=approved","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:13:05.221] Server  LOG     ✓ Compiled in 98ms
-[00:13:06.186] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:06.186] Browser LOG     [API REQUEST] GET /auth/me
-[00:13:06.186] Browser ERROR   Backend not reached (network or CORS issue)
-[00:13:06.186] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:13:06.186] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:13:06.186] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:13:06.186] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:13:18.054] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:13:19.077] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:13:19.219] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:19.219] Browser LOG     [API REQUEST] GET /auth/me
-[00:13:19.219] Browser ERROR   Backend not reached (network or CORS issue)
-[00:13:19.219] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:13:19.219] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:13:19.219] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:13:19.219] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:13:21.639] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:13:23.119] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:13:23.248] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:23.248] Browser LOG     [API REQUEST] GET /auth/me
-[00:13:23.248] Browser ERROR   Backend not reached (network or CORS issue)
-[00:13:23.248] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:13:23.248] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:13:23.248] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:13:23.248] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc2OTE5MzI1NiwiZXhwIjoxNzY5Nzk4MDU2fQ.Vt_8pd5nFRPvwvskN8zCt28tixRD2S6xFNKYOJ0Cwf0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:13:51.317] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:51.317] Browser LOG     [API REQUEST] POST /auth/logout
-[00:13:51.317] Browser ERROR   Backend not reached (network or CORS issue)
-[00:13:51.317] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/logout
-[00:13:51.317] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"post","url":"http://localhost:5001/api/auth/logout"}
-[00:13:51.317] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:13:51.317] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/x-www-form-urlencoded"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/logout","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:13:51.317] Browser WARN    [AUTH] Server logout failed: Network Error
-[00:13:55.355] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:55.355] Browser LOG     [API REQUEST] GET /auth/me
-[00:13:55.355] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:55.355] Browser LOG     [API REQUEST] GET /auth/me
-[00:13:55.355] Browser ERROR   Backend not reached (network or CORS issue)
-[00:13:55.355] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:13:55.355] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:13:55.355] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:13:55.355] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:13:55.355] Browser ERROR   Backend not reached (network or CORS issue)
-[00:13:55.355] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:13:55.355] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:13:55.355] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:13:55.355] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:14:40.881] Server  LOG     ✓ Compiled in 55ms
-[00:15:35.987] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:37.304] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:37.442] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:15:37.442] Browser LOG     [API REQUEST] GET /auth/me
-[00:15:37.442] Browser ERROR   Backend not reached (network or CORS issue)
-[00:15:37.442] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:15:37.442] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:15:37.442] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:15:37.442] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:15:39.807] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:40.683] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:40.809] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:15:40.809] Browser LOG     [API REQUEST] GET /auth/me
-[00:15:40.809] Browser ERROR   Backend not reached (network or CORS issue)
-[00:15:40.809] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:15:40.809] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:15:40.809] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:15:40.809] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:16:29.395] Server  LOG     ✓ Compiled in 64ms
-[00:16:35.462] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:35.590] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:35.590] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:35.590] Browser ERROR   Backend not reached (network or CORS issue)
-[00:16:35.590] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:16:35.590] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:16:35.590] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:16:35.590] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:16:38.766] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:38.766] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:38.766] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:38.766] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:38.766] Browser ERROR   Backend not reached (network or CORS issue)
-[00:16:38.766] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:16:38.766] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:16:38.766] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:16:38.766] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:16:38.766] Browser ERROR   Backend not reached (network or CORS issue)
-[00:16:38.766] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:16:38.766] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:16:38.766] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:16:38.766] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:17:03.466] Server  LOG     ✓ Compiled in 56ms
-[00:17:37.483] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:17:37.483] Browser LOG     [API REQUEST] GET /auth/me
-[00:17:37.483] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:17:37.483] Browser LOG     [API REQUEST] GET /auth/me
-[00:17:37.483] Browser ERROR   Backend not reached (network or CORS issue)
-[00:17:37.483] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:17:37.483] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:17:37.483] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:17:37.483] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:17:37.483] Browser ERROR   Backend not reached (network or CORS issue)
-[00:17:37.483] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/auth/me
-[00:17:37.483] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"get","url":"http://localhost:5001/api/auth/me"}
-[00:17:37.483] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:17:37.483] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/auth/me","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
+[00:00:01.269] Server  LOG     ✓ Ready in 994ms
+[00:00:03.143] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.316] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:03.316] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:03.316] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:00:03.316] Browser WARN    [API] Backend message: Authentication required
+[00:00:03.316] Browser WARN    [API] Backend error: null
+[00:00:03.316] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:00:24.010] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:24.011] Browser LOG     [API REQUEST] POST /auth/login
+[00:00:24.011] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
+[00:00:24.219] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTE2ODE3NCwiZXhwIjoxNzcxNzcyOTc0fQ.adqySt9rajI8IKaKvjQ4cAz1UxUdoR3dJMZNIw4aS2Y","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
+[00:00:24.219] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTE2ODE3NCwiZXhwIjoxNzcxNzcyOTc0fQ.adqySt9rajI8IKaKvjQ4cAz1UxUdoR3dJMZNIw4aS2Y
+[00:00:24.454] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:24.454] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:24.454] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:24.454] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:00:24.454] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:24.454] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:24.668] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:24.668] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:00:24.668] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:28.424] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:28.424] Browser LOG     [API REQUEST] GET /bookings
+[00:00:28.616] Browser LOG     [API RESPONSE] 200 /bookings [{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"pending","tenant":{"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890"},"updatedAt":"2026-01-23T18:33:28.849Z"}]
+[00:00:30.761] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:30.761] Browser LOG     [API REQUEST] GET /properties/69668dc9e56c409ba2140424
+[00:00:30.952] Browser LOG     [API RESPONSE] 200 /properties/69668dc9e56c409ba2140424 {"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}
+[00:05:24.009] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:24.009] Browser LOG     [API REQUEST] GET /auth/me
+[00:05:24.009] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:24.009] Browser LOG     [API REQUEST] GET /auth/me
+[00:05:24.009] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:05:24.009] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:05:24.009] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:24.009] Browser LOG     [API REQUEST] GET /auth/me
+[00:05:24.009] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:24.009] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:05:24.009] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:24.009] Browser LOG     [API REQUEST] GET /auth/me
+[00:05:24.009] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:05:24.009] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:05:24.009] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:05:26.145] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:26.145] Browser LOG     [API REQUEST] GET /auth/me
+[00:05:26.145] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:26.145] Browser LOG     [API REQUEST] GET /auth/me
+[00:05:26.145] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:05:26.145] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:05:26.145] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:26.145] Browser LOG     [API REQUEST] GET /auth/me
+[00:05:26.145] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:26.145] Browser LOG     [API REQUEST] GET /auth/me
+[00:05:26.145] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:05:26.145] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:05:28.869] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:28.869] Browser LOG     [API REQUEST] POST /auth/logout
+[00:05:28.869] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
+[00:05:28.869] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:28.869] Browser LOG     [API REQUEST] GET /auth/me
+[00:05:28.869] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:05:28.869] Browser LOG     [API REQUEST] GET /auth/me
+[00:05:28.869] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:05:28.869] Browser WARN    [API] Backend message: Authentication required
+[00:05:28.869] Browser WARN    [API] Backend error: null
+[00:05:28.869] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:05:28.869] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:05:28.869] Browser WARN    [API] Backend message: Authentication required
+[00:05:28.869] Browser WARN    [API] Backend error: null
+[00:05:28.869] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:07.876] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:07.876] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:07.876] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:07.876] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:07.876] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:07.876] Browser WARN    [API] Backend message: Authentication required
+[00:09:07.876] Browser WARN    [API] Backend error: null
+[00:09:07.876] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:07.876] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:07.876] Browser WARN    [API] Backend message: Authentication required
+[00:09:07.876] Browser WARN    [API] Backend error: null
+[00:09:07.876] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:43.313] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:44.271] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:44.496] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:44.496] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:44.496] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:09:44.496] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:44.496] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:44.496] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:44.496] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:44.496] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:44.496] Browser WARN    [API] Backend message: Authentication required
+[00:09:44.496] Browser WARN    [API] Backend error: null
+[00:09:44.496] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:44.496] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:44.496] Browser WARN    [API] Backend message: Authentication required
+[00:09:44.496] Browser WARN    [API] Backend error: null
+[00:09:44.496] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:44.496] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:44.496] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:44.496] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:44.496] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:44.496] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:44.496] Browser WARN    [API] Backend message: Authentication required
+[00:09:44.496] Browser WARN    [API] Backend error: null
+[00:09:44.496] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:44.496] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:44.496] Browser WARN    [API] Backend message: Authentication required
+[00:09:44.496] Browser WARN    [API] Backend error: null
+[00:09:44.496] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:47.577] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:48.953] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:49.171] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:49.171] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:49.172] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:09:49.172] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:49.172] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:49.172] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:49.172] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:49.172] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:49.172] Browser WARN    [API] Backend message: Authentication required
+[00:09:49.172] Browser WARN    [API] Backend error: null
+[00:09:49.172] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:49.172] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:49.172] Browser WARN    [API] Backend message: Authentication required
+[00:09:49.172] Browser WARN    [API] Backend error: null
+[00:09:49.172] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:49.172] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:49.172] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:49.172] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:49.172] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:49.172] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:49.172] Browser WARN    [API] Backend message: Authentication required
+[00:09:49.172] Browser WARN    [API] Backend error: null
+[00:09:49.172] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:49.172] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:49.172] Browser WARN    [API] Backend message: Authentication required
+[00:09:49.172] Browser WARN    [API] Backend error: null
+[00:09:49.172] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:51.099] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:51.837] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:52.056] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:52.056] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:52.056] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:09:52.056] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:52.056] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:52.057] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:52.057] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:52.057] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:52.057] Browser WARN    [API] Backend message: Authentication required
+[00:09:52.057] Browser WARN    [API] Backend error: null
+[00:09:52.057] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:52.057] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:52.057] Browser WARN    [API] Backend message: Authentication required
+[00:09:52.057] Browser WARN    [API] Backend error: null
+[00:09:52.057] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:52.057] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:52.057] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:52.057] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:09:52.057] Browser LOG     [API REQUEST] GET /auth/me
+[00:09:52.057] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:52.057] Browser WARN    [API] Backend message: Authentication required
+[00:09:52.057] Browser WARN    [API] Backend error: null
+[00:09:52.057] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:09:52.057] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:09:52.057] Browser WARN    [API] Backend message: Authentication required
+[00:09:52.057] Browser WARN    [API] Backend error: null
+[00:09:52.057] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:13:46.156] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:13:46.156] Browser LOG     [API REQUEST] GET /auth/me
+[00:13:46.156] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:13:46.156] Browser LOG     [API REQUEST] GET /auth/me
+[00:13:46.156] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:13:46.156] Browser WARN    [API] Backend message: Authentication required
+[00:13:46.156] Browser WARN    [API] Backend error: null
+[00:13:46.156] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:13:46.156] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:13:46.156] Browser WARN    [API] Backend message: Authentication required
+[00:13:46.156] Browser WARN    [API] Backend error: null
+[00:13:46.156] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:13:54.644] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:13:54.644] Browser LOG     [API REQUEST] POST /auth/login
+[00:13:54.644] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
+[00:13:55.027] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTE2ODk4NSwiZXhwIjoxNzcxNzczNzg1fQ.7_fTV66_zFrCeVaS1a6FdD5cmMBn7Jwdjs5IRgt4mhI","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
+[00:13:55.027] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTE2ODk4NSwiZXhwIjoxNzcxNzczNzg1fQ.7_fTV66_zFrCeVaS1a6FdD5cmMBn7Jwdjs5IRgt4mhI
+[00:13:55.027] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:13:55.027] Browser LOG     [API REQUEST] GET /auth/me
+[00:13:55.027] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:13:55.027] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:13:55.027] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:13:55.027] Browser LOG     [API REQUEST] GET /auth/me
+[00:13:55.027] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:13:55.027] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:13:55.027] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:42.663] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:16:42.663] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:42.663] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:16:42.663] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:42.663] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:42.663] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:42.663] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:16:42.663] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:42.663] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:16:42.663] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:16:42.663] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:16:42.663] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:42.663] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:42.808] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:16:42.808] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:16:44.698] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:16:44.698] Browser LOG     [API REQUEST] POST /auth/logout
+[00:16:44.698] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
+[00:16:44.698] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:16:44.698] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:44.698] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:16:44.698] Browser LOG     [API REQUEST] GET /auth/me
+[00:16:44.698] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:16:44.698] Browser WARN    [API] Backend message: Authentication required
+[00:16:44.698] Browser WARN    [API] Backend error: null
+[00:16:44.698] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:16:44.698] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:16:44.698] Browser WARN    [API] Backend message: Authentication required
+[00:16:44.698] Browser WARN    [API] Backend error: null
+[00:16:44.698] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:21:48.972] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:21:48.972] Browser LOG     [API REQUEST] GET /auth/me
+[00:21:48.972] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:21:48.972] Browser LOG     [API REQUEST] GET /auth/me
+[00:21:48.972] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:21:48.972] Browser WARN    [API] Backend message: Authentication required
+[00:21:48.972] Browser WARN    [API] Backend error: null
+[00:21:48.972] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:21:48.972] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:21:48.972] Browser WARN    [API] Backend message: Authentication required
+[00:21:48.972] Browser WARN    [API] Backend error: null
+[00:21:48.972] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
