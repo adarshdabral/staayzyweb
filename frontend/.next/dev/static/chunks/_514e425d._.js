@@ -471,7 +471,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2e$ts__$5b$app$
 ;
 /* ──────────────────────────────
    BASE URL
-────────────────────────────── */ const RAW_API_URL = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_API_URL;
+────────────────────────────── */ const RAW_API_URL = ("TURBOPACK compile-time value", "http://localhost:5001");
 const IS_PROD = ("TURBOPACK compile-time value", "development") === "production";
 // Prefer build-time configured API URL when provided. Otherwise defer to
 // computing the backend base URL at runtime (in the browser) so that when
@@ -481,7 +481,7 @@ const IS_PROD = ("TURBOPACK compile-time value", "development") === "production"
 // Implementation note: Next inlines process.env.NEXT_PUBLIC_* at build time,
 // so relying on runtime detection avoids the client being stuck with a
 // localhost value baked into the bundle.
-const BUILD_API_BASE = RAW_API_URL ? RAW_API_URL.replace(/\/+$/, "") + "/api" : "";
+const BUILD_API_BASE = ("TURBOPACK compile-time truthy", 1) ? RAW_API_URL.replace(/\/+$/, "") + "/api" : "TURBOPACK unreachable";
 // We'll create the axios instance potentially without a baseURL and set a
 // runtime baseURL in the request interceptor when necessary.
 let API_BASE_URL = BUILD_API_BASE || "";

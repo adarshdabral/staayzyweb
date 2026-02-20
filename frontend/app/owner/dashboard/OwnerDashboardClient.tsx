@@ -99,7 +99,7 @@ export default function OwnerDashboardClient() {
 
   const updateBookingStatusMutation = useMutation({
     mutationFn: async ({ bookingId, status }: { bookingId: string; status: string }) => {
-      await api.patch(`/bookings/${bookingId}`, { status });
+      await api.put(`/bookings/${bookingId}/status`, { status });
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["owner-bookings"] });
