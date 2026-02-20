@@ -39,20 +39,26 @@ export function PropertyForm({
     files: [] as File[], // actual File objects to upload
   }));
 
-  const [rooms, setRooms] = useState<any[]>(
-    initialData?.rooms?.length
-      ? initialData.rooms.map((r: any) => ({ ...r }))
-      : [
-          {
-            roomType: "single",
-            capacity: 1,
-            availableCount: 1,
-            monthlyRent: "",
-            securityDeposit: "",
-            rules: [] as string[],
-          },
-        ]
-  );
+ const [rooms, setRooms] = useState<any[]>(
+  initialData?.rooms?.length
+    ? initialData.rooms.map((r: any) => ({ ...r }))
+    : [
+        {
+          roomType: "single",
+          capacity: 1,
+          availableCount: 1,
+          monthlyRent: "",
+          securityDeposit: "",
+          rules: [] as string[],
+
+          // 🆕 NEW FIELDS
+          allowedGender: "both",
+          occupancyStatus: "vacant",
+          occupiedCount: 0,
+          vacantCount: 1,
+        },
+      ]
+);
 
   const [newFacility, setNewFacility] = useState("");
   const [newRule, setNewRule] = useState("");
@@ -81,7 +87,6 @@ export function PropertyForm({
 
         const propertyId = propertyResponse.data.property._id;
 
-        // Add rooms
         for (const room of data.rooms) {
           await api.post(`/properties/${propertyId}/rooms`, {
             roomType: room.roomType,
@@ -96,14 +101,11 @@ export function PropertyForm({
         return propertyResponse.data;
       }
 
-      // edit mode
-      // Determine existingImages vs newImages: client should send existing images in `existingImages`
-      // here we send existingImages (the images array that were not removed) and newImages (uploaded URLs)
+
       const existingImages = initialData?.images || [];
       const keptImages = data.images.filter((img: string) => existingImages.includes(img));
       const newImages = data.images.filter((img: string) => !existingImages.includes(img));
 
-      // For edits, backend expects existingImages + newImages + rooms
       const payload: any = {
         ...data,
         existingImages: keptImages,
@@ -111,7 +113,6 @@ export function PropertyForm({
         rooms: data.rooms,
       };
 
-      // Remove files/images fields from payload — files handled above
       delete payload.files;
       delete payload.images;
 
@@ -166,21 +167,27 @@ export function PropertyForm({
     setRooms(updatedRooms);
   };
 
-  const addRoom = () => {
-    setRooms([
-      ...rooms,
-      {
-        roomType: "single",
-        capacity: 1,
-        availableCount: 1,
-        monthlyRent: "",
-        securityDeposit: "",
-        rules: [],
-      },
-    ]);
-    setCurrentRoomIndex(rooms.length);
-    setStep(2);
-  };
+ const addRoom = () => {
+  setRooms([
+    ...rooms,
+    {
+      roomType: "single",
+      capacity: 1,
+      availableCount: 1,
+      monthlyRent: "",
+      securityDeposit: "",
+      rules: [],
+
+      // 🆕 NEW FIELDS
+      allowedGender: "both",
+      occupancyStatus: "vacant",
+      occupiedCount: 0,
+      vacantCount: 1,
+    },
+  ]);
+  setCurrentRoomIndex(rooms.length);
+  setStep(2);
+};
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
@@ -302,6 +309,70 @@ export function PropertyForm({
                         <Label>Security Deposit (₹) *</Label>
                         <Input type="number" min="0" value={room.securityDeposit} onChange={(e) => { const updatedRooms = [...rooms]; updatedRooms[roomIdx].securityDeposit = e.target.value; setRooms(updatedRooms); }} required />
                       </div>
+                      {/* 🆕 Allowed Gender */}
+<div>
+  <Label>Allowed For *</Label>
+  <select
+    value={room.allowedGender}
+    onChange={(e) => {
+      const updatedRooms = [...rooms];
+      updatedRooms[roomIdx].allowedGender = e.target.value;
+      setRooms(updatedRooms);
+    }}
+    className="w-full px-3 py-2 border rounded-md"
+  >
+    <option value="boys">Boys</option>
+    <option value="girls">Girls</option>
+    <option value="both">Both</option>
+  </select>
+</div>
+
+{/* 🆕 Occupancy Status */}
+<div>
+  <Label>Occupancy Status *</Label>
+  <select
+    value={room.occupancyStatus}
+    onChange={(e) => {
+      const updatedRooms = [...rooms];
+      updatedRooms[roomIdx].occupancyStatus = e.target.value;
+      setRooms(updatedRooms);
+    }}
+    className="w-full px-3 py-2 border rounded-md"
+  >
+    <option value="vacant">Vacant</option>
+    <option value="occupied">Occupied</option>
+  </select>
+</div>
+
+{/* 🆕 Occupied Count */}
+<div>
+  <Label>Occupied Count</Label>
+  <Input
+    type="number"
+    min="0"
+    value={room.occupiedCount}
+    onChange={(e) => {
+      const updatedRooms = [...rooms];
+      updatedRooms[roomIdx].occupiedCount = e.target.value;
+      setRooms(updatedRooms);
+    }}
+  />
+</div>
+
+{/* 🆕 Vacant Count */}
+<div>
+  <Label>Vacant Count</Label>
+  <Input
+    type="number"
+    min="0"
+    value={room.vacantCount}
+    onChange={(e) => {
+      const updatedRooms = [...rooms];
+      updatedRooms[roomIdx].vacantCount = e.target.value;
+      setRooms(updatedRooms);
+    }}
+  />
+</div>
                     </div>
                     <div>
                       <Label>Room Rules</Label>

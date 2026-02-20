@@ -1,283 +1,54 @@
-[00:00:01.269] Server  LOG     ✓ Ready in 994ms
-[00:00:03.143] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:03.316] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:03.316] Browser LOG     [API REQUEST] GET /auth/me
-[00:00:03.316] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:00:03.316] Browser WARN    [API] Backend message: Authentication required
-[00:00:03.316] Browser WARN    [API] Backend error: null
-[00:00:03.316] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:00:24.010] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:24.011] Browser LOG     [API REQUEST] POST /auth/login
-[00:00:24.011] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
-[00:00:24.219] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTE2ODE3NCwiZXhwIjoxNzcxNzcyOTc0fQ.adqySt9rajI8IKaKvjQ4cAz1UxUdoR3dJMZNIw4aS2Y","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
-[00:00:24.219] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTE2ODE3NCwiZXhwIjoxNzcxNzcyOTc0fQ.adqySt9rajI8IKaKvjQ4cAz1UxUdoR3dJMZNIw4aS2Y
-[00:00:24.454] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:24.454] Browser LOG     [API REQUEST] GET /auth/me
-[00:00:24.454] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:24.454] Browser LOG     [API REQUEST] GET /properties?owner=me
-[00:00:24.454] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:24.454] Browser LOG     [API REQUEST] GET /auth/me
-[00:00:24.668] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:00:24.668] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
-[00:00:24.668] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:00:28.424] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:28.424] Browser LOG     [API REQUEST] GET /bookings
-[00:00:28.616] Browser LOG     [API RESPONSE] 200 /bookings [{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"pending","tenant":{"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890"},"updatedAt":"2026-01-23T18:33:28.849Z"}]
-[00:00:30.761] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:30.761] Browser LOG     [API REQUEST] GET /properties/69668dc9e56c409ba2140424
-[00:00:30.952] Browser LOG     [API RESPONSE] 200 /properties/69668dc9e56c409ba2140424 {"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}
-[00:05:24.009] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:24.009] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:24.009] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:24.009] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:24.009] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:05:24.009] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:05:24.009] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:24.009] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:24.009] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:24.009] Browser LOG     [API REQUEST] GET /properties?owner=me
-[00:05:24.009] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:24.009] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:24.009] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:05:24.009] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:05:24.009] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
-[00:05:26.145] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:26.145] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:26.145] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:26.145] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:26.145] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:05:26.145] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:05:26.145] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:26.145] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:26.145] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:26.145] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:26.145] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:05:26.145] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:05:28.869] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:28.869] Browser LOG     [API REQUEST] POST /auth/logout
-[00:05:28.869] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
-[00:05:28.869] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:28.869] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:28.869] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:05:28.869] Browser LOG     [API REQUEST] GET /auth/me
-[00:05:28.869] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:05:28.869] Browser WARN    [API] Backend message: Authentication required
-[00:05:28.869] Browser WARN    [API] Backend error: null
-[00:05:28.869] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:05:28.869] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:05:28.869] Browser WARN    [API] Backend message: Authentication required
-[00:05:28.869] Browser WARN    [API] Backend error: null
-[00:05:28.869] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:07.876] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:07.876] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:07.876] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:07.876] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:07.876] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:07.876] Browser WARN    [API] Backend message: Authentication required
-[00:09:07.876] Browser WARN    [API] Backend error: null
-[00:09:07.876] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:07.876] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:07.876] Browser WARN    [API] Backend message: Authentication required
-[00:09:07.876] Browser WARN    [API] Backend error: null
-[00:09:07.876] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:43.313] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:44.271] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:44.496] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:44.496] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:44.496] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:09:44.496] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:44.496] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:44.496] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:44.496] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:44.496] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:44.496] Browser WARN    [API] Backend message: Authentication required
-[00:09:44.496] Browser WARN    [API] Backend error: null
-[00:09:44.496] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:44.496] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:44.496] Browser WARN    [API] Backend message: Authentication required
-[00:09:44.496] Browser WARN    [API] Backend error: null
-[00:09:44.496] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:44.496] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:44.496] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:44.496] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:44.496] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:44.496] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:44.496] Browser WARN    [API] Backend message: Authentication required
-[00:09:44.496] Browser WARN    [API] Backend error: null
-[00:09:44.496] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:44.496] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:44.496] Browser WARN    [API] Backend message: Authentication required
-[00:09:44.496] Browser WARN    [API] Backend error: null
-[00:09:44.496] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:47.577] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:48.953] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:49.171] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:49.171] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:49.172] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:09:49.172] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:49.172] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:49.172] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:49.172] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:49.172] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:49.172] Browser WARN    [API] Backend message: Authentication required
-[00:09:49.172] Browser WARN    [API] Backend error: null
-[00:09:49.172] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:49.172] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:49.172] Browser WARN    [API] Backend message: Authentication required
-[00:09:49.172] Browser WARN    [API] Backend error: null
-[00:09:49.172] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:49.172] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:49.172] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:49.172] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:49.172] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:49.172] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:49.172] Browser WARN    [API] Backend message: Authentication required
-[00:09:49.172] Browser WARN    [API] Backend error: null
-[00:09:49.172] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:49.172] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:49.172] Browser WARN    [API] Backend message: Authentication required
-[00:09:49.172] Browser WARN    [API] Backend error: null
-[00:09:49.172] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:51.099] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:51.837] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:52.056] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:52.056] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:52.056] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:09:52.056] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:52.056] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:52.057] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:52.057] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:52.057] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:52.057] Browser WARN    [API] Backend message: Authentication required
-[00:09:52.057] Browser WARN    [API] Backend error: null
-[00:09:52.057] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:52.057] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:52.057] Browser WARN    [API] Backend message: Authentication required
-[00:09:52.057] Browser WARN    [API] Backend error: null
-[00:09:52.057] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:52.057] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:52.057] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:52.057] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:09:52.057] Browser LOG     [API REQUEST] GET /auth/me
-[00:09:52.057] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:52.057] Browser WARN    [API] Backend message: Authentication required
-[00:09:52.057] Browser WARN    [API] Backend error: null
-[00:09:52.057] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:09:52.057] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:09:52.057] Browser WARN    [API] Backend message: Authentication required
-[00:09:52.057] Browser WARN    [API] Backend error: null
-[00:09:52.057] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:13:46.156] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:46.156] Browser LOG     [API REQUEST] GET /auth/me
-[00:13:46.156] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:46.156] Browser LOG     [API REQUEST] GET /auth/me
-[00:13:46.156] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:13:46.156] Browser WARN    [API] Backend message: Authentication required
-[00:13:46.156] Browser WARN    [API] Backend error: null
-[00:13:46.156] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:13:46.156] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:13:46.156] Browser WARN    [API] Backend message: Authentication required
-[00:13:46.156] Browser WARN    [API] Backend error: null
-[00:13:46.156] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:13:54.644] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:54.644] Browser LOG     [API REQUEST] POST /auth/login
-[00:13:54.644] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
-[00:13:55.027] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTE2ODk4NSwiZXhwIjoxNzcxNzczNzg1fQ.7_fTV66_zFrCeVaS1a6FdD5cmMBn7Jwdjs5IRgt4mhI","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
-[00:13:55.027] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTE2ODk4NSwiZXhwIjoxNzcxNzczNzg1fQ.7_fTV66_zFrCeVaS1a6FdD5cmMBn7Jwdjs5IRgt4mhI
-[00:13:55.027] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:55.027] Browser LOG     [API REQUEST] GET /auth/me
-[00:13:55.027] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:55.027] Browser LOG     [API REQUEST] GET /properties?owner=me
-[00:13:55.027] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:13:55.027] Browser LOG     [API REQUEST] GET /auth/me
-[00:13:55.027] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:13:55.027] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
-[00:13:55.027] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:16:42.663] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:42.663] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:42.663] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:42.663] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:42.663] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:16:42.663] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:16:42.663] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:42.663] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:42.663] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:42.663] Browser LOG     [API REQUEST] GET /properties?owner=me
-[00:16:42.663] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:42.663] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:42.663] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:16:42.808] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
-[00:16:42.808] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:16:44.698] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:44.698] Browser LOG     [API REQUEST] POST /auth/logout
-[00:16:44.698] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
-[00:16:44.698] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:44.698] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:44.698] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:16:44.698] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:44.698] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:16:44.698] Browser WARN    [API] Backend message: Authentication required
-[00:16:44.698] Browser WARN    [API] Backend error: null
-[00:16:44.698] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:16:44.698] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:16:44.698] Browser WARN    [API] Backend message: Authentication required
-[00:16:44.698] Browser WARN    [API] Backend error: null
-[00:16:44.698] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:21:48.972] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:21:48.972] Browser LOG     [API REQUEST] GET /auth/me
-[00:21:48.972] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:21:48.972] Browser LOG     [API REQUEST] GET /auth/me
-[00:21:48.972] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:21:48.972] Browser WARN    [API] Backend message: Authentication required
-[00:21:48.972] Browser WARN    [API] Backend error: null
-[00:21:48.972] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
-[00:21:48.972] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
-[00:21:48.972] Browser WARN    [API] Backend message: Authentication required
-[00:21:48.972] Browser WARN    [API] Backend error: null
-[00:21:48.972] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
-    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
-    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:00:01.400] Server  LOG     ✓ Ready in 1090ms
+[00:00:13.107] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:13.254] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:13.254] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:13.486] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890","referralCode":"TESDB1LKJ","role":"tenant"}
+[00:00:15.187] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:15.187] Browser LOG     [API REQUEST] POST /auth/logout
+[00:00:15.187] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
+[00:00:23.792] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:23.792] Browser LOG     [API REQUEST] POST /auth/login
+[00:00:23.792] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
+[00:00:24.086] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTU4ODU4MiwiZXhwIjoxNzcyMTkzMzgyfQ.-i6M9HhOlm83lL3L-DsiRtTO28pav7H7bj4cnPhsGSI","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
+[00:00:24.086] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTU4ODU4MiwiZXhwIjoxNzcyMTkzMzgyfQ.-i6M9HhOlm83lL3L-DsiRtTO28pav7H7bj4cnPhsGSI
+[00:00:24.086] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:24.086] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:24.086] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:24.086] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:00:24.086] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:24.086] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:24.220] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:24.428] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:24.428] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:00:26.975] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:26.975] Browser LOG     [API REQUEST] GET /bookings
+[00:00:27.244] Browser LOG     [API RESPONSE] 200 /bookings [{"__v":0,"_id":"6995f4531f46a4c623f5077d","createdAt":"2026-02-18T17:18:11.033Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-02-20T00:00:00.000Z","status":"pending","tenant":{"_id":"6995f2971f46a4c623f50754","email":"vr8393877@gmail.com","name":"Vaibhav Rajput","phone":"+918393877531"},"updatedAt":"2026-02-18T17:18:11.033Z"},{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"pending","tenant":{"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890"},"updatedAt":"2026-01-23T18:33:28.849Z"}]
+[00:00:28.497] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:00:28.497] Browser LOG     [API REQUEST] GET /properties/69668dc9e56c409ba2140424
+[00:00:28.847] Browser LOG     [API RESPONSE] 200 /properties/69668dc9e56c409ba2140424 {"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}
+[00:00:52.118] Server  LOG     ✓ Compiled in 85ms
+[00:03:44.333] Server  LOG     ✓ Compiled in 85ms
+[00:04:18.987] Server  LOG     ✓ Compiled in 63ms
+[00:06:05.162] Server  LOG     ✓ Compiled in 75ms
+[00:06:38.427] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:38.591] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:06:38.591] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:06:38.591] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:06:38.592] Browser LOG     [API REQUEST] GET /bookings
+[00:06:38.592] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:06:38.592] Browser LOG     [API REQUEST] GET /properties/69668dc9e56c409ba2140424
+[00:06:38.952] Browser LOG     [API RESPONSE] 200 /bookings [{"__v":0,"_id":"6995f4531f46a4c623f5077d","createdAt":"2026-02-18T17:18:11.033Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-02-20T00:00:00.000Z","status":"pending","tenant":{"_id":"6995f2971f46a4c623f50754","email":"vr8393877@gmail.com","name":"Vaibhav Rajput","phone":"+918393877531"},"updatedAt":"2026-02-18T17:18:11.033Z"},{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"pending","tenant":{"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890"},"updatedAt":"2026-01-23T18:33:28.849Z"}]
+[00:06:38.952] Browser LOG     [API RESPONSE] 200 /properties/69668dc9e56c409ba2140424 {"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}
+[00:06:38.952] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
+[00:06:40.631] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:06:40.631] Browser LOG     [API REQUEST] GET /auth/me
+[00:06:40.631] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:06:40.631] Browser LOG     [API REQUEST] GET /auth/me
+[00:06:40.789] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:06:40.934] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:07:07.044] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:07:07.044] Browser LOG     [API REQUEST] GET /auth/me
+[00:07:07.044] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
+[00:07:07.044] Browser LOG     [API REQUEST] GET /auth/me
+[00:07:07.211] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:07:07.426] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}

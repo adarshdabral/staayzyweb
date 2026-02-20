@@ -22,6 +22,12 @@ const createRoomSchema = z.object({
   monthlyRent: z.number().min(0),
   securityDeposit: z.number().min(0),
   rules: z.array(z.string()).optional(),
+
+
+  allowedGender: z.enum(["boys", "girls", "both"]).default("both"),
+  occupancyStatus: z.enum(["occupied", "vacant"]).default("vacant"),
+  occupiedCount: z.number().min(0).default(0),
+  vacantCount: z.number().min(0).default(0),
 });
 
 /* ──────────────────────────────
