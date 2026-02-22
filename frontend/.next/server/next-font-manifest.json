@@ -1,47 +1,58 @@
 {
   "app": {
-    "[project]/app/_not-found/page": [
+    "[project]/frontend/app/_not-found/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/admin/dashboard/page": [
+    "[project]/frontend/app/admin/dashboard/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/auth/login/page": [
+    "[project]/frontend/app/auth/login/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/auth/register/page": [
+    "[project]/frontend/app/auth/register/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/owner/dashboard/page": [
+    "[project]/frontend/app/owner/dashboard/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/owner/page": [
+    "[project]/frontend/app/owner/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/owner/properties/new/page": [
+    "[project]/frontend/app/owner/properties/new/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/page": [
+    "[project]/frontend/app/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/properties/[id]/page": [
+    "[project]/frontend/app/properties/[id]/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/tenant/dashboard/page": [
+    "[project]/frontend/app/tenant/dashboard/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/tenant/page": [
+    "[project]/frontend/app/tenant/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/f48d461c03e0a8ec-s.p.4f85faee.woff2",
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ]
   },

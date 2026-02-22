@@ -141,7 +141,7 @@ self.__SERVER_FILES_MANIFEST={
     }
   },
   "appDir": "/Users/ash/Developer/Stazzy2/staayzy/frontend",
-  "relativeAppDir": "",
+  "relativeAppDir": "frontend",
   "files": [
     ".next/routes-manifest.json",
     ".next/server/pages-manifest.json",
