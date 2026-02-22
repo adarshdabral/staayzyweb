@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +23,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Staayzy - Student Accommodation Marketplace",
+  title: "Staayzy - Stay Hassle Free, Stay Eazy",
   description: "Find your perfect student living space with verified rooms, transparent pricing, and essential local services",
 };
 
@@ -38,7 +39,10 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1">
+            {children}
+            <SpeedInsights/>
+          </main>
           <Footer />
         </Providers>
       </body>
