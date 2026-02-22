@@ -77,6 +77,10 @@ const RoomSchema = new mongoose_1.Schema({
             trim: true,
         },
     ],
+    allowedGender: { type: String, enum: ["boys", "girls", "both"], default: "both" },
+    occupancyStatus: { type: String, enum: ["occupied", "vacant"], default: "vacant" },
+    occupiedCount: { type: Number, default: 0, min: 0 },
+    vacantCount: { type: Number, default: 0, min: 0 },
 }, {
     timestamps: true,
 });

@@ -14,21 +14,21 @@ cloudinary.config({
 // and upload to Cloudinary using cloudinary.uploader.upload_stream if needed.
 const storage = multer.memoryStorage();
 
+const allowedMimetypes = [
+  "image/jpeg", "image/jpg", "image/png", "image/webp",
+  "video/mp4", "video/webm", "video/quicktime", "video/x-msvideo",
+];
+
 export const upload = multer({
   storage,
   limits: {
-    fileSize: 5 * 1024 * 1024, // 5MB
+    fileSize: 50 * 1024 * 1024, // 50MB for videos
   },
   fileFilter: (req, file, cb) => {
-    if (
-      file.mimetype === "image/jpeg" ||
-      file.mimetype === "image/jpg" ||
-      file.mimetype === "image/png" ||
-      file.mimetype === "image/webp"
-    ) {
+    if (allowedMimetypes.includes(file.mimetype)) {
       cb(null, true);
     } else {
-      cb(new Error("Only image files are allowed"));
+      cb(new Error("Only image and video files are allowed"));
     }
   },
 });

@@ -8,8 +8,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import api from "@/lib/api";
 import { useAuthStore } from "@/lib/store";
 import { useToast } from "@/lib/hooks/use-toast";
-import { MapPin, Bed, Users, Star, Heart, Calendar, Shield, Check } from "lucide-react";
-import Image from "next/image";
+import { MapPin, Bed, Star, Heart, Check } from "lucide-react";
 
 export default function PropertyDetailPage() {
   const params = useParams();
@@ -131,8 +130,8 @@ export default function PropertyDetailPage() {
   }
 
   // Handle backend response shape for unavailable properties
-  if (property && property.available === false) {
-    const p = property.property; // actual property object returned by backend
+  if (rawData && (rawData as any).available === false) {
+    const p = property;
     return (
       <div className="min-h-screen flex items-center justify-center p-4">
         <div className="max-w-2xl text-center">
@@ -155,15 +154,24 @@ export default function PropertyDetailPage() {
         <div className="mb-8">
           {property.images && property.images.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {property.images.map((image: string, idx: number) => (
-                <div key={idx} className="h-64 bg-gray-200 rounded-lg overflow-hidden">
-                  <img
-                    src={image}
-                    alt={`${property.name} - Image ${idx + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
+              {property.images
+                .filter((url: string) => typeof url === "string" && !url.startsWith("blob:"))
+                .map((media: string, idx: number) => {
+                  const isVideo = /\.(mp4|webm|mov|avi)(\?|$)/i.test(media) || /\/video\/upload\//i.test(media);
+                  return (
+                    <div key={idx} className="h-64 bg-gray-200 rounded-lg overflow-hidden">
+                      {isVideo ? (
+                        <video src={media} controls className="w-full h-full object-cover" />
+                      ) : (
+                        <img
+                          src={media}
+                          alt={`${property.name} - Media ${idx + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
+                    </div>
+                  );
+                })}
             </div>
           ) : (
             <div className="h-96 bg-gray-200 rounded-lg flex items-center justify-center">

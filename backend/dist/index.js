@@ -54,6 +54,8 @@ const RAW_FRONTEND = process.env.CLIENT_URL || "";
 const DEFAULT_ALLOWED = [
     "http://localhost:3000",
     "https://staayzyweb.vercel.app",
+    "https://staayzy.com",
+    "https://www.staayzy.com"
 ];
 // If deploy-time CLIENT_URL is provided, include any comma-separated entries
 // but ensure we don't accidentally allow anything else — merge and dedupe.
@@ -62,10 +64,14 @@ const envOrigins = RAW_FRONTEND
     .map((s) => s.trim())
     .filter(Boolean);
 const ALLOWED_ORIGINS = Array.from(new Set([...DEFAULT_ALLOWED, ...envOrigins]));
-// Accept a small LAN subnet for local testing (10.159.x.x:3000). We use a
-// regex check instead of a permissive wildcard so credentials header may be
-// supported while still being reasonably safe for local testing.
-const LAN_10_159_REGEX = /^http:\/\/10\.159\.\d{1,3}\.\d{1,3}:3000$/;
+// Accept common private LAN subnets for local testing (port 3000). We use a
+// regex check instead of a permissive wildcard so credentialed requests may
+// be supported while still keeping the check reasonably scoped for dev use.
+// Matches:
+//  - http://10.x.x.x:3000
+//  - http://192.168.x.x:3000
+//  - http://172.16.x.x:3000 through http://172.31.x.x:3000
+const LAN_PRIVATE_REGEX = /^http:\/\/(?:10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2[0-9]|3[0-1])\.\d{1,3}\.\d{1,3}):3000$/;
 const corsOptions = {
     origin: function (origin, callback) {
         // Debug: log incoming origin so we can see what the browser is sending.
@@ -78,8 +84,8 @@ const corsOptions = {
             console.log("[CORS] Allowed origin (exact):", origin);
             return callback(null, true);
         }
-        // Allow the LAN 10.159.* host for in-network testing (port 3000)
-        if (LAN_10_159_REGEX.test(origin)) {
+        // Allow common private LAN origins for local in-network testing (port 3000)
+        if (LAN_PRIVATE_REGEX.test(origin)) {
             console.log("[CORS] Allowing LAN origin for dev testing:", origin);
             return callback(null, true);
         }

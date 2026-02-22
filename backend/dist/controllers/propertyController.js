@@ -8,6 +8,21 @@ const Property_1 = __importDefault(require("../models/Property"));
 const Room_1 = __importDefault(require("../models/Room"));
 const zod_1 = require("zod");
 /* ──────────────────────────────
+   MEDIA SANITIZATION
+   Safety: Never allow blob URLs, local URLs, or non-Cloudinary URLs
+   into the database. Ensures rendering works and prevents corruption.
+────────────────────────────── */
+function sanitizeMediaUrls(urls) {
+    if (!Array.isArray(urls))
+        return [];
+    return urls
+        .filter((url) => typeof url === "string" && url.trim().length > 0)
+        .filter((url) => !url.startsWith("blob:"))
+        .filter((url) => url.startsWith("https://"))
+        .filter((url) => url.includes("res.cloudinary.com"))
+        .filter((url, idx, arr) => arr.indexOf(url) === idx);
+}
+/* ──────────────────────────────
    VALIDATION SCHEMAS
 ────────────────────────────── */
 const createPropertySchema = zod_1.z.object({
@@ -19,11 +34,15 @@ const createPropertySchema = zod_1.z.object({
 });
 const createRoomSchema = zod_1.z.object({
     roomType: zod_1.z.enum(["single", "sharing"]),
-    capacity: zod_1.z.number().min(1),
-    availableCount: zod_1.z.number().min(0),
-    monthlyRent: zod_1.z.number().min(0),
-    securityDeposit: zod_1.z.number().min(0),
+    capacity: zod_1.z.coerce.number().min(1),
+    availableCount: zod_1.z.coerce.number().min(0),
+    monthlyRent: zod_1.z.coerce.number().min(0),
+    securityDeposit: zod_1.z.coerce.number().min(0),
     rules: zod_1.z.array(zod_1.z.string()).optional(),
+    allowedGender: zod_1.z.enum(["boys", "girls", "both"]).default("both"),
+    occupancyStatus: zod_1.z.enum(["occupied", "vacant"]).default("vacant"),
+    occupiedCount: zod_1.z.coerce.number().min(0).default(0),
+    vacantCount: zod_1.z.coerce.number().min(0).default(0),
 });
 /* ──────────────────────────────
    CREATE PROPERTY
@@ -31,8 +50,10 @@ const createRoomSchema = zod_1.z.object({
 const createProperty = async (req, res) => {
     try {
         const validated = createPropertySchema.parse(req.body);
+        const sanitizedImages = sanitizeMediaUrls(validated.images || []);
         const property = await Property_1.default.create({
             ...validated,
+            images: sanitizedImages,
             owner: req.user._id,
             status: "pending",
         });
@@ -211,18 +232,21 @@ const updateProperty = async (req, res) => {
             req.user.role !== "admin") {
             return res.status(403).json({ message: "Access denied" });
         }
-        // Handle images: prefer explicit existingImages + newImages (newImages are URLs)
-        let images = undefined;
-        if (Array.isArray(body.existingImages) || Array.isArray(body.newImages)) {
-            const existingImages = Array.isArray(body.existingImages) ? body.existingImages : [];
-            const newImages = Array.isArray(body.newImages) ? body.newImages : [];
-            images = [...existingImages, ...newImages];
+        // Merge images from any supported format, then sanitize (never trust client)
+        let merged = [];
+        if (Array.isArray(body.images)) {
+            merged = body.images;
+        }
+        else if (Array.isArray(body.existingImages) || Array.isArray(body.newImages)) {
+            const existing = Array.isArray(body.existingImages) ? body.existingImages : [];
+            const newUrls = Array.isArray(body.newImages) ? body.newImages : [];
+            merged = [...existing, ...newUrls];
         }
         else if (Array.isArray(validated.images)) {
-            images = validated.images;
+            merged = validated.images;
         }
-        if (images) {
-            validated.images = images;
+        if (merged.length > 0 || body.images !== undefined || body.existingImages !== undefined || body.newImages !== undefined) {
+            validated.images = sanitizeMediaUrls(merged);
         }
         // Apply core property updates
         Object.assign(property, validated);
@@ -237,7 +261,8 @@ const updateProperty = async (req, res) => {
             for (const r of roomsData) {
                 try {
                     const validatedRoom = createRoomSchema.parse(r);
-                    await Room_1.default.create({ ...validatedRoom, property: id });
+                    const { _id, ...roomData } = validatedRoom;
+                    await Room_1.default.create({ ...roomData, property: id });
                 }
                 catch (roomErr) {
                     // log and continue — invalid room data should not break the whole update

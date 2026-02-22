@@ -7,6 +7,10 @@ export interface IRoom extends Document {
     monthlyRent: number;
     securityDeposit: number;
     rules: string[];
+    allowedGender?: "boys" | "girls" | "both";
+    occupancyStatus?: "occupied" | "vacant";
+    occupiedCount?: number;
+    vacantCount?: number;
     createdAt: Date;
     updatedAt: Date;
 }

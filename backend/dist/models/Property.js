@@ -34,6 +34,64 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
+/* ================= ROOM SUB-SCHEMA ================= */
+const RoomSchema = new mongoose_1.Schema({
+    roomType: {
+        type: String,
+        enum: ["single", "sharing"],
+        required: true,
+    },
+    capacity: {
+        type: Number,
+        required: true,
+        min: 1,
+    },
+    availableCount: {
+        type: Number,
+        required: true,
+        min: 0,
+    },
+    monthlyRent: {
+        type: Number,
+        required: true,
+        min: 0,
+    },
+    securityDeposit: {
+        type: Number,
+        required: true,
+        min: 0,
+    },
+    rules: [
+        {
+            type: String,
+            trim: true,
+        },
+    ],
+    // 🔥 NEW FIELDS
+    allowedGender: {
+        type: String,
+        enum: ["boys", "girls", "both"],
+        default: "both",
+        required: true,
+    },
+    occupancyStatus: {
+        type: String,
+        enum: ["occupied", "vacant"],
+        default: "vacant",
+    },
+    occupiedCount: {
+        type: Number,
+        default: 0,
+        min: 0,
+    },
+    vacantCount: {
+        type: Number,
+        default: 0,
+        min: 0,
+    },
+}, { _id: false } // embedded → no separate _id needed
+);
+/* ================= PROPERTY SCHEMA ================= */
 const PropertySchema = new mongoose_1.Schema({
     owner: {
         type: mongoose_1.Schema.Types.ObjectId,
@@ -67,6 +125,8 @@ const PropertySchema = new mongoose_1.Schema({
             required: true,
         },
     ],
+    // 🆕 ROOMS ARRAY
+    rooms: [RoomSchema],
     status: {
         type: String,
         enum: ["pending", "approved", "rejected"],

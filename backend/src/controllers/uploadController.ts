@@ -24,7 +24,10 @@ export const uploadImages = async (req: AuthRequest, res: Response) => {
     for (const file of files) {
       try {
         const dataUri = `data:${file.mimetype};base64,${file.buffer.toString("base64")}`;
-        const result = await cloudinary.uploader.upload(dataUri, { folder: "staayzy" });
+        const result = await cloudinary.uploader.upload(dataUri, {
+          folder: "staayzy",
+          resource_type: "auto",
+        });
         uploadResults.push(result);
       } catch (err: any) {
         const msg = err?.message || err?.toString() || "Unknown upload error";

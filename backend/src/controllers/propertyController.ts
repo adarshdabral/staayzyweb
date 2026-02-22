@@ -5,6 +5,21 @@ import Room from "../models/Room";
 import { z } from "zod";
 
 /* ──────────────────────────────
+   MEDIA SANITIZATION
+   Safety: Never allow blob URLs, local URLs, or non-Cloudinary URLs
+   into the database. Ensures rendering works and prevents corruption.
+────────────────────────────── */
+function sanitizeMediaUrls(urls: string[]): string[] {
+  if (!Array.isArray(urls)) return [];
+  return urls
+    .filter((url): url is string => typeof url === "string" && url.trim().length > 0)
+    .filter((url) => !url.startsWith("blob:"))
+    .filter((url) => url.startsWith("https://"))
+    .filter((url) => url.includes("res.cloudinary.com"))
+    .filter((url, idx, arr) => arr.indexOf(url) === idx);
+}
+
+/* ──────────────────────────────
    VALIDATION SCHEMAS
 ────────────────────────────── */
 const createPropertySchema = z.object({
@@ -17,17 +32,15 @@ const createPropertySchema = z.object({
 
 const createRoomSchema = z.object({
   roomType: z.enum(["single", "sharing"]),
-  capacity: z.number().min(1),
-  availableCount: z.number().min(0),
-  monthlyRent: z.number().min(0),
-  securityDeposit: z.number().min(0),
+  capacity: z.coerce.number().min(1),
+  availableCount: z.coerce.number().min(0),
+  monthlyRent: z.coerce.number().min(0),
+  securityDeposit: z.coerce.number().min(0),
   rules: z.array(z.string()).optional(),
-
-
   allowedGender: z.enum(["boys", "girls", "both"]).default("both"),
   occupancyStatus: z.enum(["occupied", "vacant"]).default("vacant"),
-  occupiedCount: z.number().min(0).default(0),
-  vacantCount: z.number().min(0).default(0),
+  occupiedCount: z.coerce.number().min(0).default(0),
+  vacantCount: z.coerce.number().min(0).default(0),
 });
 
 /* ──────────────────────────────
@@ -37,8 +50,11 @@ export const createProperty = async (req: AuthRequest, res: Response) => {
   try {
     const validated = createPropertySchema.parse(req.body);
 
+    const sanitizedImages = sanitizeMediaUrls(validated.images || []);
+
     const property = await Property.create({
       ...validated,
+      images: sanitizedImages,
       owner: req.user!._id,
       status: "pending",
     });
@@ -254,18 +270,20 @@ export const updateProperty = async (req: AuthRequest, res: Response) => {
       return res.status(403).json({ message: "Access denied" });
     }
 
-    // Handle images: prefer explicit existingImages + newImages (newImages are URLs)
-    let images: string[] | undefined = undefined;
-    if (Array.isArray(body.existingImages) || Array.isArray(body.newImages)) {
-      const existingImages = Array.isArray(body.existingImages) ? body.existingImages : [];
-      const newImages = Array.isArray(body.newImages) ? body.newImages : [];
-      images = [...existingImages, ...newImages];
+    // Merge images from any supported format, then sanitize (never trust client)
+    let merged: string[] = [];
+    if (Array.isArray(body.images)) {
+      merged = body.images;
+    } else if (Array.isArray(body.existingImages) || Array.isArray(body.newImages)) {
+      const existing = Array.isArray(body.existingImages) ? body.existingImages : [];
+      const newUrls = Array.isArray(body.newImages) ? body.newImages : [];
+      merged = [...existing, ...newUrls];
     } else if (Array.isArray(validated.images)) {
-      images = validated.images;
+      merged = validated.images;
     }
 
-    if (images) {
-      validated.images = images;
+    if (merged.length > 0 || body.images !== undefined || body.existingImages !== undefined || body.newImages !== undefined) {
+      validated.images = sanitizeMediaUrls(merged);
     }
 
     // Apply core property updates
@@ -282,7 +300,8 @@ export const updateProperty = async (req: AuthRequest, res: Response) => {
       for (const r of roomsData) {
         try {
           const validatedRoom = createRoomSchema.parse(r);
-          await Room.create({ ...validatedRoom, property: id });
+          const { _id, ...roomData } = validatedRoom as any;
+          await Room.create({ ...roomData, property: id });
         } catch (roomErr) {
           // log and continue — invalid room data should not break the whole update
           console.warn("Invalid room data skipped during update:", roomErr);

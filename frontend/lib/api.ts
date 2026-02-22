@@ -3,7 +3,6 @@ import axios, {
   AxiosResponse,
   InternalAxiosRequestConfig,
 } from "axios";
-import { useAuthStore } from "@/lib/store";
 
 /* ──────────────────────────────
    BASE URL
@@ -43,8 +42,20 @@ api.defaults.withCredentials = true;
    REQUEST INTERCEPTOR
 ────────────────────────────── */
 api.interceptors.request.use(
-  (config: InternalAxiosRequestConfig) => {
-    const token = useAuthStore.getState().token;
+  // Make the interceptor async and dynamically import the client-only
+  // auth store to avoid importing browser-only modules during server-side
+  // rendering. This prevents circular imports / runtime errors that can
+  // block Next's server rendering and cause the frontend to hang.
+  async (config: InternalAxiosRequestConfig) => {
+    let token: string | null | undefined = undefined;
+    try {
+      if (typeof window !== "undefined") {
+        const mod = await import("@/lib/store");
+        token = mod.useAuthStore.getState().token;
+      }
+    } catch (e) {
+      // ignore dynamic import failures; we'll continue without a token
+    }
 
     // Compute runtime baseURL for browser clients when appropriate. This
     // helps two cases:
@@ -56,7 +67,8 @@ api.interceptors.request.use(
       if (typeof window !== "undefined") {
         const host = window.location.hostname;
         const protocol = window.location.protocol === "https:" ? "https" : "http";
-        const port = 5001; // default backend port for local dev
+        const portNum = parseInt(process.env.NEXT_PUBLIC_API_PORT || "5001", 10);
+        const port = Number.isNaN(portNum) || portNum <= 0 ? 5001 : portNum;
 
         const shouldOverrideLocalhost = !!config.baseURL && /localhost|127\.0\.0\.1/.test(config.baseURL) && !/localhost|127\.0\.0\.1/.test(host);
 
@@ -73,7 +85,8 @@ api.interceptors.request.use(
     }
 
     if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
+      config.headers = config.headers || {};
+      (config.headers as any).Authorization = `Bearer ${token}`;
     }
 
     // If we're sending FormData, delete any explicit Content-Type so the

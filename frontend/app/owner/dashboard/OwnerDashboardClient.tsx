@@ -255,9 +255,10 @@ function EmptyCard({ text, children }: any) {
 }
 
 function PropertyCard({ property, canEdit, onView, onEdit, onDelete }: any) {
+  const thumbUrl = property.images?.find((u: string) => typeof u === "string" && !u.startsWith("blob:"));
   return (
     <Card>
-      {property.images?.[0] && <img src={property.images[0]} alt={property.name} className="h-48 w-full object-cover" />}
+      {thumbUrl && <img src={thumbUrl} alt={property.name} className="h-48 w-full object-cover" />}
       <CardHeader>
         <CardTitle>{property.name}</CardTitle>
         <CardDescription>

@@ -36,9 +36,6 @@ const authenticate = async (req, res, next) => {
             }
             return res.status(401).json({ message: "Authentication required" });
         }
-        if (!token) {
-            return res.status(401).json({ message: "Authentication required" });
-        }
         const JWT_SECRET = process.env.JWT_SECRET;
         if (!JWT_SECRET) {
             throw new Error("JWT_SECRET is not defined");
@@ -96,11 +93,13 @@ exports.authenticate = authenticate;
 ────────────────────────────── */
 const optionalAuthenticate = async (req, _res, next) => {
     try {
-        const authHeader = req.headers.authorization;
-        if (!authHeader || !authHeader.startsWith("Bearer ")) {
-            return next();
+        let token = req.cookies?.auth_token;
+        if (!token) {
+            const authHeader = req.headers.authorization;
+            if (authHeader && authHeader.startsWith("Bearer ")) {
+                token = authHeader.split(" ")[1];
+            }
         }
-        const token = authHeader.split(" ")[1];
         if (!token)
             return next();
         const JWT_SECRET = process.env.JWT_SECRET;

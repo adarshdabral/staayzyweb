@@ -23,7 +23,10 @@ const uploadImages = async (req, res) => {
         for (const file of files) {
             try {
                 const dataUri = `data:${file.mimetype};base64,${file.buffer.toString("base64")}`;
-                const result = await cloudinary_1.default.uploader.upload(dataUri, { folder: "staayzy" });
+                const result = await cloudinary_1.default.uploader.upload(dataUri, {
+                    folder: "staayzy",
+                    resource_type: "auto",
+                });
                 uploadResults.push(result);
             }
             catch (err) {

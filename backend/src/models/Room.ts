@@ -8,6 +8,10 @@ export interface IRoom extends Document {
   monthlyRent: number;
   securityDeposit: number;
   rules: string[];
+  allowedGender?: "boys" | "girls" | "both";
+  occupancyStatus?: "occupied" | "vacant";
+  occupiedCount?: number;
+  vacantCount?: number;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -56,6 +60,10 @@ const RoomSchema = new Schema<IRoom>(
         trim: true,
       },
     ],
+    allowedGender: { type: String, enum: ["boys", "girls", "both"], default: "both" },
+    occupancyStatus: { type: String, enum: ["occupied", "vacant"], default: "vacant" },
+    occupiedCount: { type: Number, default: 0, min: 0 },
+    vacantCount: { type: Number, default: 0, min: 0 },
   },
   {
     timestamps: true,
