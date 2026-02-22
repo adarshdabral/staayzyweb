@@ -10,6 +10,7 @@ import { useAuthStore } from "@/lib/store";
 import { Check, Home, TrendingUp, Shield, Users, DollarSign, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+
 export default function OwnerLandingPage() {
   const router = useRouter();
 
@@ -52,7 +53,25 @@ export default function OwnerLandingPage() {
     },
   });
 
-  if (checking) return <div className="p-8">Checking permissions...</div>;
+
+
+if (checking) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="flex flex-col items-center gap-4">
+        
+        {/* Spinner */}
+        <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+
+        {/* Text */}
+        <p className="text-gray-600 text-lg animate-pulse">
+          Checking permissions...
+        </p>
+
+      </div>
+    </div>
+  );
+}
 
   if (!authorized) return null;
 

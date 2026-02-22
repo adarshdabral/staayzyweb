@@ -1,128 +1,274 @@
-[00:00:01.250] Server  LOG     ✓ Ready in 950ms
-[00:00:12.911] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:13.059] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:13.059] Browser LOG     [API REQUEST] GET /auth/me
-[00:00:13.427] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:00:13.427] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:13.427] Browser LOG     [API REQUEST] GET /auth/me
-[00:00:13.427] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:13.427] Browser LOG     [API REQUEST] GET /properties?owner=me
-[00:00:13.427] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:13.427] Browser LOG     [API REQUEST] GET /auth/me
-[00:00:13.427] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:00:13.427] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:00:13.427] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
-[00:00:15.978] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:15.978] Browser LOG     [API REQUEST] GET /bookings
-[00:00:16.170] Browser LOG     [API RESPONSE] 200 /bookings [{"__v":0,"_id":"6995f4531f46a4c623f5077d","createdAt":"2026-02-18T17:18:11.033Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-02-20T00:00:00.000Z","status":"pending","tenant":{"_id":"6995f2971f46a4c623f50754","email":"vr8393877@gmail.com","name":"Vaibhav Rajput","phone":"+918393877531"},"updatedAt":"2026-02-18T17:18:11.033Z"},{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"pending","tenant":{"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890"},"updatedAt":"2026-01-23T18:33:28.849Z"}]
-[00:00:21.564] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:00:21.564] Browser LOG     [API REQUEST] PATCH /bookings/6995f4531f46a4c623f5077d
-[00:00:21.564] Browser LOG     [API REQUEST] Payload: {"status":"approved"}
-[00:00:21.564] Browser ERROR   Backend not reached (network or CORS issue)
-[00:00:21.564] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d
-[00:00:21.564] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"patch","url":"http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d"}
-[00:00:21.564] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:00:21.564] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","data":"{\"status\":\"approved\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTU4ODU4MiwiZXhwIjoxNzcyMTkzMzgyfQ.-i6M9HhOlm83lL3L-DsiRtTO28pav7H7bj4cnPhsGSI","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"patch","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/bookings/6995f4531f46a4c623f5077d","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:01:16.376] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:01:16.376] Browser LOG     [API REQUEST] PATCH /bookings/6995f4531f46a4c623f5077d
-[00:01:16.376] Browser LOG     [API REQUEST] Payload: {"status":"rejected"}
-[00:01:16.376] Browser ERROR   Backend not reached (network or CORS issue)
-[00:01:16.376] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d
-[00:01:16.376] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"patch","url":"http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d"}
-[00:01:16.376] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:01:16.376] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","data":"{\"status\":\"rejected\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTU4ODU4MiwiZXhwIjoxNzcyMTkzMzgyfQ.-i6M9HhOlm83lL3L-DsiRtTO28pav7H7bj4cnPhsGSI","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"patch","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/bookings/6995f4531f46a4c623f5077d","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:01:18.226] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:01:18.226] Browser LOG     [API REQUEST] PATCH /bookings/6995f4531f46a4c623f5077d
-[00:01:18.226] Browser LOG     [API REQUEST] Payload: {"status":"rejected"}
-[00:01:18.226] Browser ERROR   Backend not reached (network or CORS issue)
-[00:01:18.226] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d
-[00:01:18.226] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"patch","url":"http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d"}
-[00:01:18.226] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:01:18.226] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","data":"{\"status\":\"rejected\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTU4ODU4MiwiZXhwIjoxNzcyMTkzMzgyfQ.-i6M9HhOlm83lL3L-DsiRtTO28pav7H7bj4cnPhsGSI","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"patch","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/bookings/6995f4531f46a4c623f5077d","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:01:18.393] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:01:18.393] Browser LOG     [API REQUEST] PATCH /bookings/6995f4531f46a4c623f5077d
-[00:01:18.393] Browser LOG     [API REQUEST] Payload: {"status":"rejected"}
-[00:01:18.393] Browser ERROR   Backend not reached (network or CORS issue)
-[00:01:18.393] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d
-[00:01:18.393] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"patch","url":"http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d"}
-[00:01:18.393] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:01:18.393] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","data":"{\"status\":\"rejected\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTU4ODU4MiwiZXhwIjoxNzcyMTkzMzgyfQ.-i6M9HhOlm83lL3L-DsiRtTO28pav7H7bj4cnPhsGSI","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"patch","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/bookings/6995f4531f46a4c623f5077d","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:01:18.976] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:01:18.976] Browser LOG     [API REQUEST] PATCH /bookings/6995f4531f46a4c623f5077d
-[00:01:18.976] Browser LOG     [API REQUEST] Payload: {"status":"approved"}
-[00:01:18.976] Browser ERROR   Backend not reached (network or CORS issue)
-[00:01:18.976] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d
-[00:01:18.976] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"patch","url":"http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d"}
-[00:01:18.976] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:01:18.976] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","data":"{\"status\":\"approved\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTU4ODU4MiwiZXhwIjoxNzcyMTkzMzgyfQ.-i6M9HhOlm83lL3L-DsiRtTO28pav7H7bj4cnPhsGSI","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"patch","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/bookings/6995f4531f46a4c623f5077d","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:03:27.375] Server  LOG       Reload env: .env.local
-[00:03:27.865] Server  LOG     ✓ Compiled in 424ms
-[00:03:28.743] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:03:28.743] Browser LOG     [API REQUEST] GET /properties?owner=me
-[00:03:28.743] Browser LOG     [API] Runtime baseURL computed: http://localhost:5001/api (overrideLocalhost= false )
-[00:03:28.743] Browser LOG     [API REQUEST] GET /bookings
-[00:03:28.743] Browser LOG     [API RESPONSE] 200 /bookings [{"__v":0,"_id":"6995f4531f46a4c623f5077d","createdAt":"2026-02-18T17:18:11.033Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-02-20T00:00:00.000Z","status":"pending","tenant":{"_id":"6995f2971f46a4c623f50754","email":"vr8393877@gmail.com","name":"Vaibhav Rajput","phone":"+918393877531"},"updatedAt":"2026-02-18T17:18:11.033Z"},{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"pending","tenant":{"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890"},"updatedAt":"2026-01-23T18:33:28.849Z"}]
-[00:03:28.743] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
-[00:03:31.724] Browser LOG     [API REQUEST] PATCH /bookings/6995f4531f46a4c623f5077d
-[00:03:31.725] Browser LOG     [API REQUEST] Payload: {"status":"rejected"}
-[00:03:31.725] Browser ERROR   Backend not reached (network or CORS issue)
-[00:03:31.725] Browser ERROR   [API] Resolved request URL: http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d
-[00:03:31.725] Browser ERROR   [API] Request details: {"baseURL":"http://localhost:5001/api","method":"patch","url":"http://localhost:5001/api/bookings/6995f4531f46a4c623f5077d"}
-[00:03:31.725] Browser ERROR   [API] If your frontend and backend are on different origins, ensure:
-  - the backend sets 'Access-Control-Allow-Credentials: true' and an exact 'Access-Control-Allow-Origin' matching the request origin;
-  - cookies are set with SameSite=None and Secure in production;
-+  - NEXT_PUBLIC_API_URL is set to the backend URL (no trailing /).
-[00:03:31.725] Browser ERROR   Axios error (no response): {"code":"ERR_NETWORK","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5001/api","data":"{\"status\":\"rejected\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTU4ODU4MiwiZXhwIjoxNzcyMTkzMzgyfQ.-i6M9HhOlm83lL3L-DsiRtTO28pav7H7bj4cnPhsGSI","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"patch","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/bookings/6995f4531f46a4c623f5077d","withCredentials":true,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Network Error","name":"AxiosError","stack":"AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16394:25)"}
-[00:16:34.473] Server  LOG     ✓ Compiled in 923ms
-[00:16:35.741] Browser LOG     [API REQUEST] GET /properties?owner=me
-[00:16:35.741] Browser LOG     [API REQUEST] GET /bookings
-[00:16:35.741] Browser LOG     [API RESPONSE] 200 /bookings [{"__v":0,"_id":"6995f4531f46a4c623f5077d","createdAt":"2026-02-18T17:18:11.033Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-02-20T00:00:00.000Z","status":"pending","tenant":{"_id":"6995f2971f46a4c623f50754","email":"vr8393877@gmail.com","name":"Vaibhav Rajput","phone":"+918393877531"},"updatedAt":"2026-02-18T17:18:11.033Z"},{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"pending","tenant":{"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890"},"updatedAt":"2026-01-23T18:33:28.849Z"}]
-[00:16:35.741] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
-[00:16:40.410] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:40.585] Browser LOG     [API REQUEST] GET /properties?owner=me
-[00:16:40.585] Browser LOG     [API REQUEST] GET /bookings
-[00:16:40.763] Browser LOG     [API RESPONSE] 200 /bookings [{"__v":0,"_id":"6995f4531f46a4c623f5077d","createdAt":"2026-02-18T17:18:11.033Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-02-20T00:00:00.000Z","status":"pending","tenant":{"_id":"6995f2971f46a4c623f50754","email":"vr8393877@gmail.com","name":"Vaibhav Rajput","phone":"+918393877531"},"updatedAt":"2026-02-18T17:18:11.033Z"},{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"pending","tenant":{"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890"},"updatedAt":"2026-01-23T18:33:28.849Z"}]
-[00:16:40.763] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}]
-[00:16:45.609] Browser LOG     [API REQUEST] POST /auth/login
-[00:16:45.610] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
-[00:16:46.032] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTYwNjk2NCwiZXhwIjoxNzcyMjExNzY0fQ.iwOKfO_y-Jp6gZ8WjG07OK2SSjiFyV8zSliq0tgRYr0","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
-[00:16:46.032] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTYwNjk2NCwiZXhwIjoxNzcyMjExNzY0fQ.iwOKfO_y-Jp6gZ8WjG07OK2SSjiFyV8zSliq0tgRYr0
-[00:16:46.032] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:46.032] Browser LOG     [API REQUEST] GET /auth/me
-[00:16:46.032] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:16:46.032] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:16:49.301] Browser LOG     [API REQUEST] GET /properties/69668dc9e56c409ba2140424
-[00:16:49.495] Browser LOG     [API RESPONSE] 200 /properties/69668dc9e56c409ba2140424 {"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"69668dcae56c409ba2140428","availableCount":2,"capacity":3,"createdAt":"2026-01-13T18:24:10.137Z","monthlyRent":3999,"property":"69668dc9e56c409ba2140424","roomType":"sharing","rules":[],"securityDeposit":5000,"updatedAt":"2026-01-13T18:24:10.137Z"}],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"}
-[00:16:53.041] Browser LOG     [API REQUEST] PUT /bookings/6995f4531f46a4c623f5077d/status
-[00:16:53.041] Browser LOG     [API REQUEST] Payload: {"status":"rejected"}
-[00:16:53.248] Browser LOG     [API RESPONSE] 200 /bookings/6995f4531f46a4c623f5077d/status {"booking":{"__v":0,"_id":"6995f4531f46a4c623f5077d","createdAt":"2026-02-18T17:18:11.033Z","property":{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":"69636bdc9d6a6d900f5516f3","rooms":[],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"},"rent":3999,"room":"69668dcae56c409ba2140428","securityDeposit":5000,"startDate":"2026-02-20T00:00:00.000Z","status":"rejected","tenant":"6995f2971f46a4c623f50754","updatedAt":"2026-02-20T17:02:51.434Z"},"message":"Booking status updated"}
-[00:16:53.248] Browser LOG     [API REQUEST] GET /bookings
-[00:16:53.428] Browser LOG     [API RESPONSE] 200 /bookings [{"__v":0,"_id":"6995f4531f46a4c623f5077d","createdAt":"2026-02-18T17:18:11.033Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-02-20T00:00:00.000Z","status":"rejected","tenant":{"_id":"6995f2971f46a4c623f50754","email":"vr8393877@gmail.com","name":"Vaibhav Rajput","phone":"+918393877531"},"updatedAt":"2026-02-20T17:02:51.434Z"},{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"pending","tenant":{"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890"},"updatedAt":"2026-01-23T18:33:28.849Z"}]
-[00:16:54.989] Browser LOG     [API REQUEST] PUT /bookings/6973bef88ba68b99cdd9751f/status
-[00:16:54.989] Browser LOG     [API REQUEST] Payload: {"status":"approved"}
-[00:16:55.238] Browser LOG     [API RESPONSE] 200 /bookings/6973bef88ba68b99cdd9751f/status {"booking":{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"__v":0,"_id":"69668dc9e56c409ba2140424","createdAt":"2026-01-13T18:24:09.984Z","distanceFromCollege":1,"facilities":["WIFI"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU","owner":"69636bdc9d6a6d900f5516f3","rooms":[],"status":"approved","updatedAt":"2026-01-13T18:50:40.494Z"},"rent":3999,"room":"69668dcae56c409ba2140428","securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"approved","tenant":"69668f5be56c409ba2140446","updatedAt":"2026-02-20T17:02:53.439Z"},"message":"Booking approved"}
-[00:16:55.238] Browser LOG     [API REQUEST] GET /bookings
-[00:16:55.414] Browser LOG     [API RESPONSE] 200 /bookings [{"__v":0,"_id":"6995f4531f46a4c623f5077d","createdAt":"2026-02-18T17:18:11.033Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-02-20T00:00:00.000Z","status":"rejected","tenant":{"_id":"6995f2971f46a4c623f50754","email":"vr8393877@gmail.com","name":"Vaibhav Rajput","phone":"+918393877531"},"updatedAt":"2026-02-20T17:02:51.434Z"},{"__v":0,"_id":"6973bef88ba68b99cdd9751f","createdAt":"2026-01-23T18:33:28.849Z","property":{"_id":"69668dc9e56c409ba2140424","images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1768328649/staayzy/m6hkuxlbu1irm5hvfgkg.png"],"name":"Test Property","nearestCollege":"GEU"},"rent":3999,"room":{"_id":"69668dcae56c409ba2140428","capacity":3,"monthlyRent":3999,"roomType":"sharing"},"securityDeposit":5000,"startDate":"2026-01-23T00:00:00.000Z","status":"approved","tenant":{"_id":"69668f5be56c409ba2140446","email":"testt@gmail.com","name":"Test Tenant","phone":"+91 1234567890"},"updatedAt":"2026-02-20T17:02:53.439Z"}]
-[00:17:14.177] Browser LOG     [API REQUEST] GET /auth/me
-[00:17:14.177] Browser LOG     [API REQUEST] GET /auth/me
-[00:17:14.177] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:17:14.177] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
-[00:17:31.443] Browser LOG     [API REQUEST] DELETE /properties/69668dc9e56c409ba2140424
-[00:17:31.662] Browser LOG     [API RESPONSE] 200 /properties/69668dc9e56c409ba2140424 {"message":"Property deleted successfully"}
-[00:17:31.662] Browser LOG     [API REQUEST] GET /properties?owner=me
-[00:17:31.764] Browser LOG     [API RESPONSE] 200 /properties?owner=me []
+[00:00:01.273] Server  LOG     ✓ Ready in 986ms
+[00:00:13.788] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:13.936] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:14.080] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:14.127] Server  ERROR   ⨯ ./app/owner/page.tsx:55:1
+Parsing ecmascript source code failed
+  53 |   });
+  54 |
+> 55 | import { Shield } from "lucide-react";
+     | ^^^^^^
+  56 |
+  57 | if (checking) {
+  58 |   return (
+
+'import', and 'export' cannot be used outside of module code
+
+
+[00:00:14.266] Browser ERROR   ./app/owner/page.tsx:55:1
+Parsing ecmascript source code failed
+  53 |   });
+  54 |
+> 55 | import { Shield } from "lucide-react";
+     | ^^^^^^
+  56 |
+  57 | if (checking) {
+  58 |   return (
+
+'import', and 'export' cannot be used outside of module code
+[00:00:14.701] Browser ERROR   ./app/owner/page.tsx:55:1
+Parsing ecmascript source code failed
+  53 |   });
+  54 |
+> 55 | import { Shield } from "lucide-react";
+     | ^^^^^^
+  56 |
+  57 | if (checking) {
+  58 |   return (
+
+'import', and 'export' cannot be used outside of module code
+[00:00:14.701] Browser ERROR   ./app/owner/page.tsx:55:1
+Parsing ecmascript source code failed
+  53 |   });
+  54 |
+> 55 | import { Shield } from "lucide-react";
+     | ^^^^^^
+  56 |
+  57 | if (checking) {
+  58 |   return (
+
+'import', and 'export' cannot be used outside of module code
+[00:00:14.859] Browser ERROR   ./app/owner/page.tsx:55:1
+Parsing ecmascript source code failed
+  53 |   });
+  54 |
+> 55 | import { Shield } from "lucide-react";
+     | ^^^^^^
+  56 |
+  57 | if (checking) {
+  58 |   return (
+
+'import', and 'export' cannot be used outside of module code
+[00:00:14.876] Server  ERROR   ⨯ ./app/owner/page.tsx:55:1
+Parsing ecmascript source code failed
+  53 |   });
+  54 |
+> 55 | import { Shield } from "lucide-react";
+     | ^^^^^^
+  56 |
+  57 | if (checking) {
+  58 |   return (
+
+'import', and 'export' cannot be used outside of module code
+
+
+[00:00:14.980] Browser ERROR   uncaughtError: Error: ./app/owner/page.tsx:55:1
+Parsing ecmascript source code failed
+  53 |   });
+  54 |
+> 55 | import { Shield } from "lucide-react";
+     | ^^^^^^
+  56 |
+  57 | if (checking) {
+  58 |   return (
+
+'import', and 'export' cannot be used outside of module code
+
+
+[00:00:15.134] Browser ERROR   ./app/owner/page.tsx:55:1
+Parsing ecmascript source code failed
+  53 |   });
+  54 |
+> 55 | import { Shield } from "lucide-react";
+     | ^^^^^^
+  56 |
+  57 | if (checking) {
+  58 |   return (
+
+'import', and 'export' cannot be used outside of module code
+[00:00:15.134] Browser ERROR   ./app/owner/page.tsx:55:1
+Parsing ecmascript source code failed
+  53 |   });
+  54 |
+> 55 | import { Shield } from "lucide-react";
+     | ^^^^^^
+  56 |
+  57 | if (checking) {
+  58 |   return (
+
+'import', and 'export' cannot be used outside of module code
+[00:00:26.886] Browser ERROR   ./app/owner/page.tsx:12:10
+Ecmascript file had an error
+  10 | import { Check, Home, TrendingUp, Shield, Users, DollarSign, ArrowRight } from "lucide-react";
+  11 | import Link from "next/link";
+> 12 | import { Shield } from "lucide-react";
+     |          ^^^^^^
+  13 |
+  14 | export default function OwnerLandingPage() {
+  15 |   const router = useRouter();
+
+the name `Shield` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/owner/page.tsx [Client Component Browser]
+    ./app/owner/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/owner/page.tsx [Client Component SSR]
+    ./app/owner/page.tsx [Server Component]
+[00:00:31.064] Server  LOG     ✓ Compiled in 64ms
+[00:00:31.322] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:31.886] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:31.886] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:00:31.886] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:31.886] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"699974c1ea91b3ba70792d4b","createdAt":"2026-02-21T09:02:57.557Z","distanceFromCollege":1,"facilities":["Wifi","Ac"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1771664576/staayzy/yiom1ckzvakmgsd5peug.png"],"name":"Adarsh","nearestCollege":"Geu","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"699974c2ea91b3ba70792d4f","availableCount":1,"capacity":1,"createdAt":"2026-02-21T09:02:58.048Z","monthlyRent":5000,"property":"699974c1ea91b3ba70792d4b","roomType":"single","rules":["No smoking"],"securityDeposit":5000,"updatedAt":"2026-02-21T09:02:58.048Z"}],"status":"pending","updatedAt":"2026-02-21T09:02:57.557Z"}]
+[00:00:37.234] Browser LOG     [API REQUEST] POST /auth/logout
+[00:00:37.234] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
+[00:00:37.234] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:37.234] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:37.234] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:00:37.234] Browser WARN    [API] Backend message: Authentication required
+[00:00:37.234] Browser WARN    [API] Backend error: null
+[00:00:37.234] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:00:37.234] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:00:37.234] Browser WARN    [API] Backend message: Authentication required
+[00:00:37.234] Browser WARN    [API] Backend error: null
+[00:00:37.234] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:00:43.495] Browser LOG     [API REQUEST] POST /auth/login
+[00:00:43.495] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
+[00:00:43.817] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTcyOTMyNSwiZXhwIjoxNzcyMzM0MTI1fQ.Q2kAnjzDhzFZ2I04dQU1bXZIu4cvBKUCr_sldKScqyQ","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
+[00:00:43.817] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTcyOTMyNSwiZXhwIjoxNzcyMzM0MTI1fQ.Q2kAnjzDhzFZ2I04dQU1bXZIu4cvBKUCr_sldKScqyQ
+[00:00:43.817] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:43.817] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:43.817] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:43.973] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:00:50.815] Browser LOG     [API REQUEST] POST /auth/logout
+[00:00:50.815] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
+[00:00:50.815] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:50.815] Browser LOG     [API REQUEST] GET /auth/me
+[00:00:50.815] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:00:50.815] Browser WARN    [API] Backend message: Authentication required
+[00:00:50.815] Browser WARN    [API] Backend error: null
+[00:00:50.815] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:00:50.815] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:00:50.815] Browser WARN    [API] Backend message: Authentication required
+[00:00:50.815] Browser WARN    [API] Backend error: null
+[00:00:50.815] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:00:59.621] Browser LOG     [API REQUEST] POST /auth/login
+[00:00:59.621] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
+[00:01:00.001] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTcyOTM0MiwiZXhwIjoxNzcyMzM0MTQyfQ.ZBLDE8q5NAJxF_4nej558Kwl6yvnrSa2y3BlpGa9PXY","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
+[00:01:00.001] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTcyOTM0MiwiZXhwIjoxNzcyMzM0MTQyfQ.ZBLDE8q5NAJxF_4nej558Kwl6yvnrSa2y3BlpGa9PXY
+[00:01:00.001] Browser LOG     [API REQUEST] GET /auth/me
+[00:01:00.001] Browser LOG     [API REQUEST] GET /auth/me
+[00:01:00.001] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:01:00.001] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:01:28.205] Server  LOG     ✓ Compiled in 62ms
+[00:01:32.246] Browser LOG     [API REQUEST] POST /auth/logout
+[00:01:32.246] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
+[00:01:32.246] Browser LOG     [API REQUEST] GET /auth/me
+[00:01:32.246] Browser LOG     [API REQUEST] GET /auth/me
+[00:01:32.246] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:01:32.246] Browser WARN    [API] Backend message: Authentication required
+[00:01:32.246] Browser WARN    [API] Backend error: null
+[00:01:32.246] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:01:32.246] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:01:32.246] Browser WARN    [API] Backend message: Authentication required
+[00:01:32.246] Browser WARN    [API] Backend error: null
+[00:01:32.246] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:01:41.379] Browser LOG     [API REQUEST] POST /auth/login
+[00:01:41.379] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
+[00:01:41.792] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTcyOTM4MywiZXhwIjoxNzcyMzM0MTgzfQ.qkWLnTHrTbzzRv-xO8W_LgC0sgfjsT1pr5ctIQ_04gY","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
+[00:01:41.792] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTcyOTM4MywiZXhwIjoxNzcyMzM0MTgzfQ.qkWLnTHrTbzzRv-xO8W_LgC0sgfjsT1pr5ctIQ_04gY
+[00:01:41.792] Browser LOG     [API REQUEST] GET /auth/me
+[00:01:41.793] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:01:41.793] Browser LOG     [API REQUEST] GET /auth/me
+[00:01:41.793] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:01:41.793] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"699974c1ea91b3ba70792d4b","createdAt":"2026-02-21T09:02:57.557Z","distanceFromCollege":1,"facilities":["Wifi","Ac"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1771664576/staayzy/yiom1ckzvakmgsd5peug.png"],"name":"Adarsh","nearestCollege":"Geu","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"699974c2ea91b3ba70792d4f","availableCount":1,"capacity":1,"createdAt":"2026-02-21T09:02:58.048Z","monthlyRent":5000,"property":"699974c1ea91b3ba70792d4b","roomType":"single","rules":["No smoking"],"securityDeposit":5000,"updatedAt":"2026-02-21T09:02:58.048Z"}],"status":"pending","updatedAt":"2026-02-21T09:02:57.557Z"}]
+[00:01:41.793] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:01:53.058] Browser LOG     [API REQUEST] GET /auth/me
+[00:01:53.058] Browser LOG     [API REQUEST] GET /auth/me
+[00:01:53.259] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:01:53.259] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:02:17.432] Server  LOG     ✓ Compiled in 65ms
+[00:02:21.595] Browser LOG     [API REQUEST] POST /auth/logout
+[00:02:21.595] Browser LOG     [API RESPONSE] 200 /auth/logout {"message":"Logged out"}
+[00:02:21.595] Browser LOG     [API REQUEST] GET /auth/me
+[00:02:21.595] Browser LOG     [API REQUEST] GET /auth/me
+[00:02:21.595] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:02:21.595] Browser WARN    [API] Backend message: Authentication required
+[00:02:21.595] Browser WARN    [API] Backend error: null
+[00:02:21.595] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:02:21.595] Browser WARN    [API RESPONSE] {"response":{"message":"Authentication required"},"status":401,"url":"http://localhost:5001/api/auth/me"}
+[00:02:21.595] Browser WARN    [API] Backend message: Authentication required
+[00:02:21.595] Browser WARN    [API] Backend error: null
+[00:02:21.595] Browser WARN    [API] Axios error stack: AxiosError: Request failed with status code 401
+    at settle (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:15833:16)
+    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_d4d88c09._.js:16348:174)
+[00:02:28.083] Browser LOG     [API REQUEST] POST /auth/login
+[00:02:28.083] Browser LOG     [API REQUEST] Payload: {"email":"testO@gmail.com","password":"1234567890"}
+[00:02:28.307] Browser LOG     [API RESPONSE] 200 /auth/login {"message":"Login successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTcyOTQzMCwiZXhwIjoxNzcyMzM0MjMwfQ.6TYwXvHKgXHQhQQF1PbANrG5TU-Nvgd7DfeJZZIgukE","user":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}}
+[00:02:28.307] Browser LOG     [AUTH STORE] setAuth {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"} eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjM2YmRjOWQ2YTZkOTAwZjU1MTZmMyIsInJvbGUiOiJvd25lciIsImlhdCI6MTc3MTcyOTQzMCwiZXhwIjoxNzcyMzM0MjMwfQ.6TYwXvHKgXHQhQQF1PbANrG5TU-Nvgd7DfeJZZIgukE
+[00:02:28.307] Browser LOG     [API REQUEST] GET /auth/me
+[00:02:28.307] Browser LOG     [API REQUEST] GET /auth/me
+[00:02:28.508] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:02:28.508] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:06:11.793] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:12.121] Browser LOG     [API REQUEST] GET /auth/me
+[00:06:12.121] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:06:12.121] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:06:12.121] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"699974c1ea91b3ba70792d4b","createdAt":"2026-02-21T09:02:57.557Z","distanceFromCollege":1,"facilities":["Wifi","Ac"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1771664576/staayzy/yiom1ckzvakmgsd5peug.png"],"name":"Adarsh","nearestCollege":"Geu","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"699974c2ea91b3ba70792d4f","availableCount":1,"capacity":1,"createdAt":"2026-02-21T09:02:58.048Z","monthlyRent":5000,"property":"699974c1ea91b3ba70792d4b","roomType":"single","rules":["No smoking"],"securityDeposit":5000,"updatedAt":"2026-02-21T09:02:58.048Z"}],"status":"pending","updatedAt":"2026-02-21T09:02:57.557Z"}]
+[00:06:13.058] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:13.369] Browser LOG     [API REQUEST] GET /auth/me
+[00:06:13.369] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:06:13.369] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:06:13.369] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"699974c1ea91b3ba70792d4b","createdAt":"2026-02-21T09:02:57.557Z","distanceFromCollege":1,"facilities":["Wifi","Ac"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1771664576/staayzy/yiom1ckzvakmgsd5peug.png"],"name":"Adarsh","nearestCollege":"Geu","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"699974c2ea91b3ba70792d4f","availableCount":1,"capacity":1,"createdAt":"2026-02-21T09:02:58.048Z","monthlyRent":5000,"property":"699974c1ea91b3ba70792d4b","roomType":"single","rules":["No smoking"],"securityDeposit":5000,"updatedAt":"2026-02-21T09:02:58.048Z"}],"status":"pending","updatedAt":"2026-02-21T09:02:57.557Z"}]
+[00:06:14.164] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:14.460] Browser LOG     [API REQUEST] GET /auth/me
+[00:06:14.460] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:06:14.460] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:06:14.460] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"699974c1ea91b3ba70792d4b","createdAt":"2026-02-21T09:02:57.557Z","distanceFromCollege":1,"facilities":["Wifi","Ac"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1771664576/staayzy/yiom1ckzvakmgsd5peug.png"],"name":"Adarsh","nearestCollege":"Geu","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"699974c2ea91b3ba70792d4f","availableCount":1,"capacity":1,"createdAt":"2026-02-21T09:02:58.048Z","monthlyRent":5000,"property":"699974c1ea91b3ba70792d4b","roomType":"single","rules":["No smoking"],"securityDeposit":5000,"updatedAt":"2026-02-21T09:02:58.048Z"}],"status":"pending","updatedAt":"2026-02-21T09:02:57.557Z"}]
+[00:06:14.789] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:15.095] Browser LOG     [API REQUEST] GET /auth/me
+[00:06:15.095] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:06:15.095] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:06:15.095] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"699974c1ea91b3ba70792d4b","createdAt":"2026-02-21T09:02:57.557Z","distanceFromCollege":1,"facilities":["Wifi","Ac"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1771664576/staayzy/yiom1ckzvakmgsd5peug.png"],"name":"Adarsh","nearestCollege":"Geu","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"699974c2ea91b3ba70792d4f","availableCount":1,"capacity":1,"createdAt":"2026-02-21T09:02:58.048Z","monthlyRent":5000,"property":"699974c1ea91b3ba70792d4b","roomType":"single","rules":["No smoking"],"securityDeposit":5000,"updatedAt":"2026-02-21T09:02:58.048Z"}],"status":"pending","updatedAt":"2026-02-21T09:02:57.557Z"}]
+[00:06:15.379] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:15.689] Browser LOG     [API REQUEST] GET /auth/me
+[00:06:15.689] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:06:15.689] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:06:15.689] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"699974c1ea91b3ba70792d4b","createdAt":"2026-02-21T09:02:57.557Z","distanceFromCollege":1,"facilities":["Wifi","Ac"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1771664576/staayzy/yiom1ckzvakmgsd5peug.png"],"name":"Adarsh","nearestCollege":"Geu","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"699974c2ea91b3ba70792d4f","availableCount":1,"capacity":1,"createdAt":"2026-02-21T09:02:58.048Z","monthlyRent":5000,"property":"699974c1ea91b3ba70792d4b","roomType":"single","rules":["No smoking"],"securityDeposit":5000,"updatedAt":"2026-02-21T09:02:58.048Z"}],"status":"pending","updatedAt":"2026-02-21T09:02:57.557Z"}]
+[00:06:15.993] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:16.293] Browser LOG     [API REQUEST] GET /auth/me
+[00:06:16.294] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:06:16.294] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:06:16.294] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"699974c1ea91b3ba70792d4b","createdAt":"2026-02-21T09:02:57.557Z","distanceFromCollege":1,"facilities":["Wifi","Ac"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1771664576/staayzy/yiom1ckzvakmgsd5peug.png"],"name":"Adarsh","nearestCollege":"Geu","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"699974c2ea91b3ba70792d4f","availableCount":1,"capacity":1,"createdAt":"2026-02-21T09:02:58.048Z","monthlyRent":5000,"property":"699974c1ea91b3ba70792d4b","roomType":"single","rules":["No smoking"],"securityDeposit":5000,"updatedAt":"2026-02-21T09:02:58.048Z"}],"status":"pending","updatedAt":"2026-02-21T09:02:57.557Z"}]
+[00:06:16.641] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:16.939] Browser LOG     [API REQUEST] GET /auth/me
+[00:06:16.939] Browser LOG     [API REQUEST] GET /properties?owner=me
+[00:06:16.939] Browser LOG     [API RESPONSE] 200 /auth/me {"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962","referralCode":"TESXR0RQR","role":"owner"}
+[00:06:16.939] Browser LOG     [API RESPONSE] 200 /properties?owner=me [{"__v":0,"_id":"699974c1ea91b3ba70792d4b","createdAt":"2026-02-21T09:02:57.557Z","distanceFromCollege":1,"facilities":["Wifi","Ac"],"images":["https://res.cloudinary.com/dghq4we8o/image/upload/v1771664576/staayzy/yiom1ckzvakmgsd5peug.png"],"name":"Adarsh","nearestCollege":"Geu","owner":{"_id":"69636bdc9d6a6d900f5516f3","email":"testo@gmail.com","name":"Test Owner","phone":"9084408962"},"rooms":[{"__v":0,"_id":"699974c2ea91b3ba70792d4f","availableCount":1,"capacity":1,"createdAt":"2026-02-21T09:02:58.048Z","monthlyRent":5000,"property":"699974c1ea91b3ba70792d4b","roomType":"single","rules":["No smoking"],"securityDeposit":5000,"updatedAt":"2026-02-21T09:02:58.048Z"}],"status":"pending","updatedAt":"2026-02-21T09:02:57.557Z"}]

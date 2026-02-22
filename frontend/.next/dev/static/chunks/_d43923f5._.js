@@ -190,14 +190,39 @@ function OwnerLandingPage() {
             }
         }["OwnerLandingPage.useQuery"]
     });
-    if (checking) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "p-8",
-        children: "Checking permissions..."
-    }, void 0, false, {
-        fileName: "[project]/app/owner/page.tsx",
-        lineNumber: 55,
-        columnNumber: 24
-    }, this);
+    if (checking) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "min-h-screen flex items-center justify-center bg-gray-50",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex flex-col items-center gap-4",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"
+                    }, void 0, false, {
+                        fileName: "[project]/app/owner/page.tsx",
+                        lineNumber: 64,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-gray-600 text-lg animate-pulse",
+                        children: "Checking permissions..."
+                    }, void 0, false, {
+                        fileName: "[project]/app/owner/page.tsx",
+                        lineNumber: 67,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/owner/page.tsx",
+                lineNumber: 61,
+                columnNumber: 7
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/app/owner/page.tsx",
+            lineNumber: 60,
+            columnNumber: 5
+        }, this);
+    }
     if (!authorized) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-gray-50",
@@ -214,7 +239,7 @@ function OwnerLandingPage() {
                                 children: "List Your Property on Staayzy"
                             }, void 0, false, {
                                 fileName: "[project]/app/owner/page.tsx",
-                                lineNumber: 65,
+                                lineNumber: 84,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -222,7 +247,7 @@ function OwnerLandingPage() {
                                 children: "Reach thousands of students looking for accommodation. Get verified listings, transparent pricing, and manage bookings all in one place."
                             }, void 0, false, {
                                 fileName: "[project]/app/owner/page.tsx",
-                                lineNumber: 66,
+                                lineNumber: 85,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -233,28 +258,28 @@ function OwnerLandingPage() {
                                     children: "List Your Property"
                                 }, void 0, false, {
                                     fileName: "[project]/app/owner/page.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 89,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/owner/page.tsx",
-                                lineNumber: 69,
+                                lineNumber: 88,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/owner/page.tsx",
-                        lineNumber: 64,
+                        lineNumber: 83,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/owner/page.tsx",
-                    lineNumber: 63,
+                    lineNumber: 82,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/owner/page.tsx",
-                lineNumber: 62,
+                lineNumber: 81,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -268,7 +293,7 @@ function OwnerLandingPage() {
                                 children: "Your Properties"
                             }, void 0, false, {
                                 fileName: "[project]/app/owner/page.tsx",
-                                lineNumber: 81,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -277,18 +302,18 @@ function OwnerLandingPage() {
                                     children: "Add New Property"
                                 }, void 0, false, {
                                     fileName: "[project]/app/owner/page.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 102,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/owner/page.tsx",
-                                lineNumber: 82,
+                                lineNumber: 101,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/owner/page.tsx",
-                        lineNumber: 80,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this),
                     properties?.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -304,12 +329,12 @@ function OwnerLandingPage() {
                                             className: "w-full h-full object-cover"
                                         }, void 0, false, {
                                             fileName: "[project]/app/owner/page.tsx",
-                                            lineNumber: 93,
+                                            lineNumber: 112,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 111,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
@@ -318,7 +343,7 @@ function OwnerLandingPage() {
                                                 children: property.name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/owner/page.tsx",
-                                                lineNumber: 101,
+                                                lineNumber: 120,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -330,13 +355,13 @@ function OwnerLandingPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/owner/page.tsx",
-                                                lineNumber: 102,
+                                                lineNumber: 121,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 119,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -348,12 +373,12 @@ function OwnerLandingPage() {
                                                     children: property.status.toUpperCase()
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/owner/page.tsx",
-                                                    lineNumber: 108,
+                                                    lineNumber: 127,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/owner/page.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 126,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -363,24 +388,24 @@ function OwnerLandingPage() {
                                                 children: "Manage Property"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/owner/page.tsx",
-                                                lineNumber: 120,
+                                                lineNumber: 139,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 106,
+                                        lineNumber: 125,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, property._id, true, {
                                 fileName: "[project]/app/owner/page.tsx",
-                                lineNumber: 90,
+                                lineNumber: 109,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/owner/page.tsx",
-                        lineNumber: 88,
+                        lineNumber: 107,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -390,7 +415,7 @@ function OwnerLandingPage() {
                                     className: "h-12 w-12 mx-auto mb-4 text-gray-400"
                                 }, void 0, false, {
                                     fileName: "[project]/app/owner/page.tsx",
-                                    lineNumber: 134,
+                                    lineNumber: 153,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -398,7 +423,7 @@ function OwnerLandingPage() {
                                     children: "No properties listed yet"
                                 }, void 0, false, {
                                     fileName: "[project]/app/owner/page.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 154,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -407,29 +432,29 @@ function OwnerLandingPage() {
                                         children: "List Your First Property"
                                     }, void 0, false, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 137,
+                                        lineNumber: 156,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/owner/page.tsx",
-                                    lineNumber: 136,
+                                    lineNumber: 155,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/owner/page.tsx",
-                            lineNumber: 133,
+                            lineNumber: 152,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/owner/page.tsx",
-                        lineNumber: 132,
+                        lineNumber: 151,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/owner/page.tsx",
-                lineNumber: 79,
+                lineNumber: 98,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -442,7 +467,7 @@ function OwnerLandingPage() {
                             children: "Benefits of Listing on Staayzy"
                         }, void 0, false, {
                             fileName: "[project]/app/owner/page.tsx",
-                            lineNumber: 147,
+                            lineNumber: 166,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -453,7 +478,7 @@ function OwnerLandingPage() {
                                         className: "h-12 w-12 text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 151,
+                                        lineNumber: 170,
                                         columnNumber: 23
                                     }, this),
                                     title: "Reach More Students",
@@ -464,7 +489,7 @@ function OwnerLandingPage() {
                                         className: "h-12 w-12 text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 156,
+                                        lineNumber: 175,
                                         columnNumber: 23
                                     }, this),
                                     title: "Transparent Pricing",
@@ -475,7 +500,7 @@ function OwnerLandingPage() {
                                         className: "h-12 w-12 text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 161,
+                                        lineNumber: 180,
                                         columnNumber: 23
                                     }, this),
                                     title: "Verified Tenants",
@@ -491,20 +516,20 @@ function OwnerLandingPage() {
                                                     children: benefit.icon
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/owner/page.tsx",
-                                                    lineNumber: 168,
+                                                    lineNumber: 187,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
                                                     children: benefit.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/owner/page.tsx",
-                                                    lineNumber: 169,
+                                                    lineNumber: 188,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/owner/page.tsx",
-                                            lineNumber: 167,
+                                            lineNumber: 186,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -513,34 +538,34 @@ function OwnerLandingPage() {
                                                 children: benefit.desc
                                             }, void 0, false, {
                                                 fileName: "[project]/app/owner/page.tsx",
-                                                lineNumber: 172,
+                                                lineNumber: 191,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/owner/page.tsx",
-                                            lineNumber: 171,
+                                            lineNumber: 190,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/app/owner/page.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 185,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/owner/page.tsx",
-                            lineNumber: 148,
+                            lineNumber: 167,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/owner/page.tsx",
-                    lineNumber: 146,
+                    lineNumber: 165,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/owner/page.tsx",
-                lineNumber: 145,
+                lineNumber: 164,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -557,7 +582,7 @@ function OwnerLandingPage() {
                                         className: "h-16 w-16 text-primary mx-auto mb-4"
                                     }, void 0, false, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 185,
+                                        lineNumber: 204,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -565,7 +590,7 @@ function OwnerLandingPage() {
                                         children: "Feature Your Property"
                                     }, void 0, false, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 186,
+                                        lineNumber: 205,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -573,13 +598,13 @@ function OwnerLandingPage() {
                                         children: "Get your property highlighted and reach more students (Paid feature - Coming Soon)"
                                     }, void 0, false, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 187,
+                                        lineNumber: 206,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/owner/page.tsx",
-                                lineNumber: 184,
+                                lineNumber: 203,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -590,28 +615,28 @@ function OwnerLandingPage() {
                                     children: "Coming Soon"
                                 }, void 0, false, {
                                     fileName: "[project]/app/owner/page.tsx",
-                                    lineNumber: 192,
+                                    lineNumber: 211,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/owner/page.tsx",
-                                lineNumber: 191,
+                                lineNumber: 210,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/owner/page.tsx",
-                        lineNumber: 183,
+                        lineNumber: 202,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/owner/page.tsx",
-                    lineNumber: 182,
+                    lineNumber: 201,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/owner/page.tsx",
-                lineNumber: 181,
+                lineNumber: 200,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -622,7 +647,7 @@ function OwnerLandingPage() {
                         children: "How to Add Your Property"
                     }, void 0, false, {
                         fileName: "[project]/app/owner/page.tsx",
-                        lineNumber: 202,
+                        lineNumber: 221,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -658,20 +683,20 @@ function OwnerLandingPage() {
                                                 children: item.step
                                             }, void 0, false, {
                                                 fileName: "[project]/app/owner/page.tsx",
-                                                lineNumber: 212,
+                                                lineNumber: 231,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
                                                 children: item.title
                                             }, void 0, false, {
                                                 fileName: "[project]/app/owner/page.tsx",
-                                                lineNumber: 215,
+                                                lineNumber: 234,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 211,
+                                        lineNumber: 230,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -680,23 +705,23 @@ function OwnerLandingPage() {
                                             children: item.desc
                                         }, void 0, false, {
                                             fileName: "[project]/app/owner/page.tsx",
-                                            lineNumber: 218,
+                                            lineNumber: 237,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 217,
+                                        lineNumber: 236,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, idx, true, {
                                 fileName: "[project]/app/owner/page.tsx",
-                                lineNumber: 210,
+                                lineNumber: 229,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/owner/page.tsx",
-                        lineNumber: 203,
+                        lineNumber: 222,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -712,35 +737,35 @@ function OwnerLandingPage() {
                                         className: "ml-2 h-5 w-5"
                                     }, void 0, false, {
                                         fileName: "[project]/app/owner/page.tsx",
-                                        lineNumber: 226,
+                                        lineNumber: 245,
                                         columnNumber: 27
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/owner/page.tsx",
-                                lineNumber: 225,
+                                lineNumber: 244,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/owner/page.tsx",
-                            lineNumber: 224,
+                            lineNumber: 243,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/owner/page.tsx",
-                        lineNumber: 223,
+                        lineNumber: 242,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/owner/page.tsx",
-                lineNumber: 201,
+                lineNumber: 220,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/owner/page.tsx",
-        lineNumber: 60,
+        lineNumber: 79,
         columnNumber: 5
     }, this);
 }
