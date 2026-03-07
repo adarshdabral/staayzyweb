@@ -62,7 +62,7 @@ export default function ContactPage() {
                 <CardDescription>
                   Call us at{" "}
                   <a href="tel:+911234567890" className="text-primary hover:underline">
-                    +91 123 456 7890
+                    +91 8273432429
                   </a>
                 </CardDescription>
               </CardHeader>
@@ -72,8 +72,8 @@ export default function ContactPage() {
                 <MapPin className="h-6 w-6 text-primary mb-2" />
                 <CardTitle>Office</CardTitle>
                 <CardDescription>
-                  123 Campus Road, College Town<br />
-                  City, State - 123456
+                  Clement Town, Dehradun.
+                  248002
                 </CardDescription>
               </CardHeader>
             </Card>

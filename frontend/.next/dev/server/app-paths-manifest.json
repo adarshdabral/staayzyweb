@@ -1,8 +1,4 @@
 {
-  "/auth/login/page": "app/auth/login/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/owner/dashboard/page": "app/owner/dashboard/page.js",
   "/owner/page": "app/owner/page.js",
-  "/page": "app/page.js",
-  "/properties/[id]/page": "app/properties/[id]/page.js"
+  "/page": "app/page.js"
 }
